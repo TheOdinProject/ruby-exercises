@@ -34,4 +34,3 @@ end
 def remover_exercise(string)
 	#return the same string with all of its white space removed
 end
-
