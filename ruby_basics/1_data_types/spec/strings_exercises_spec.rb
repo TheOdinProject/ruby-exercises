@@ -31,9 +31,6 @@ RSpec.describe 'String Exercises' do
 
 	end
 
-	describe 'escape exercise' do 
-	end
-
 	describe 'capitalizing exercise' do 
 		
 		xit 'capitalizes a word' do 

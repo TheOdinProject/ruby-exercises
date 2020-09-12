@@ -7,9 +7,6 @@ def substrings_exercise(string, substring)
  ##return true if the substring is found in the string
 end
 
-def escape_exercise(string)
-end
-
 def capitalizing_exercise(string)
 	#return the same string, with the first letter capitalized
 end
