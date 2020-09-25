@@ -3,8 +3,8 @@ def concatenation_exercise(string)
   ""
 end
 
-def substrings_exercise(string, substring)
- ##return true if the substring is found in the string
+def substrings_exercise(string, a, b)
+  #return a substring from the original string starting at index 'a' and endingat index 'b'
 end
 
 def capitalizing_exercise(string)

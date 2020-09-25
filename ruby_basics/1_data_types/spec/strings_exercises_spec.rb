@@ -17,16 +17,12 @@ RSpec.describe 'String Exercises' do
 
   describe 'substrings exercise' do 
     
-    xit 'returns true if substring is in the string' do 
-      expect(substrings_exercise('chocolate', 'late')).to eq(true)
-    end
-
-    xit 'returns false if substring is not in string' do 
-      expect(substrings_exercise('chocolate', 'milk')).to eq(false)
+    xit 'returns a substring from input string with the given indexes' do
+      expect(substrings_exercise('chocolate', 5, 8).to eq('late')
     end
 
     xit 'works with multiple words' do 
-      expect(substrings_exercise('chocolate milk', 'cola')).to eq(true)
+      expect(substrings_exercise('chocolate milk', 7, 11)).to eq('te mi')
     end
 
   end
