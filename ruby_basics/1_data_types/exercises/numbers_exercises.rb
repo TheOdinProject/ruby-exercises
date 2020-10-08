@@ -1,35 +1,35 @@
 def addition_exercise(a, b)
-  ## write a function that adds two numbers
+  # return the result of adding a and b 
 end
 
 def subtraction_exercise(a, b)
-  ## write a function that subtracts two numbers
+  # return the result of subtracting b from a 
 end
 
 def multiplication_exercise(a, b)
-  ## write a functino that multiplies two numbers
+  # return the result of multiplying a times b 
 end
 
 def division_exercise(a, b)
-  ## write a function that divides two numbers
+  # return the resut of dividing a by b
 end
 
 def modulus_exercise(a, b)
-  ## write a function that operates on two numbers using the modulo (%) operator
+  # return the remainder of dividing a by b using the modulo operator
 end
 
 def float_exercise(a, b)
-  ## write a function that uses division, but outputs a float rather than an integer.
+  # return the result of dividing a by b as a float, rather than an integer
 end
 
 def string_to_number_exercise(string)
-  ##write a function that converts a string to a number.
+  # return the result of converting a string into a number
 end
 
 def even_exercise(number)
-  ##write a function that returns true if the number is even and false otherwise
+  # return true if the number is even and false otherwise
 end
 
 def odd_exercise(number)
-  ##write a function that returns true if a number is odd and false otherwise
-end 
+  # return true if the number is odd and false otherwise
+end

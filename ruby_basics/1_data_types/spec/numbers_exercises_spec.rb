@@ -3,7 +3,7 @@ require_relative '../exercises/numbers_exercises'
 
 RSpec.describe 'Numbers Exercises' do 
 
-  describe 'addxition exercise' do
+  describe 'addition exercise' do
 
     it 'adds two numbers' do 
       expect(addition_exercise(1, 2)).to eq(3)

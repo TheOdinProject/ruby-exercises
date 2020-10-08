@@ -2,7 +2,7 @@
 
 # About this repository
 
-This repository is a complement to the Basic Ruby course for The Odin Project. It contains a series of basic Ruby exercises alongside pre-written tests that will help guide the student towardsa solution, providing a Test Driven Development experience.
+This repository is a complement to the Ruby course for The Odin Project. It contains a series of Ruby exercises alongside pre-written tests that will help guide the student towards a solution, providing a Test Driven Development experience.
 
 The exercises are meant to be done in the order dictated by their numbers (1, 2, 3...). You can still do them out of order, provided you feel appropiately prepared for them, however using the intended order would be ideal.
 
@@ -36,7 +36,7 @@ Inside this directory, you will find a 'ruby\_basics' folder. Let's move into it
 
     cd ruby_basics
 
-You will find several numbered folders inside. These correspond to each of the different lessonsyou will complete. Start by moving into the 1\_data\_types folder:
+You will find several numbered folders inside. These correspond to each of the different lessons you will complete. Start by moving into the 1\_data\_types folder:
 
     cd 1_data_types
 

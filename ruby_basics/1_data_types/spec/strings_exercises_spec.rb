@@ -33,12 +33,12 @@ RSpec.describe 'String Exercises' do
       expect(capitalizing_exercise('exercise')).to eq('Exercise')
     end
 
-    xit 'capitalizes only the first word i there are multiple words' do 
+    xit 'capitalizes only the first word if there are multiple words' do 
       expect(capitalizing_exercise('exercise is good')).to eq('Exercise is good')
     end
 
     xit 'leaves a capitalized string as is' do 
-      expect(capitalizing_exercise('Capitalized')).to eq('Capitalize')
+      expect(capitalizing_exercise('Capitalized')).to eq('Capitalized')
     end
 
   end
