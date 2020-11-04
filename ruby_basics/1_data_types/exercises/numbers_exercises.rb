@@ -1,35 +1,35 @@
-def addition_exercise(a, b)
-  # return the result of adding a and b 
+def add(a, b)
+  # return the result of adding a and b
 end
 
-def subtraction_exercise(a, b)
-  # return the result of subtracting b from a 
+def subtract(a, b)
+  # return the result of subtracting a from b
 end
 
-def multiplication_exercise(a, b)
-  # return the result of multiplying a times b 
+def multiply(a, b)
+  # return the result of multiplying a times b
 end
 
-def division_exercise(a, b)
+def divide(a, b)
   # return the resut of dividing a by b
 end
 
-def modulus_exercise(a, b)
+def remainder(a, b)
   # return the remainder of dividing a by b using the modulo operator
 end
 
-def float_exercise(a, b)
+def float_division(a, b)
   # return the result of dividing a by b as a float, rather than an integer
 end
 
-def string_to_number_exercise(string)
-  # return the result of converting a string into a number
+def string_to_number(string)
+  # return the result of converting a string into an integer
 end
 
-def even_exercise(number)
-  # return true if the number is even and false otherwise
+def even?(number)
+  # return true if the number is even
 end
 
-def odd_exercise(number)
-  # return true if the number is odd and false otherwise
+def odd?(number)
+  # return true if the number is odd
 end
