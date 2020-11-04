@@ -12,7 +12,6 @@ RSpec.describe 'String Exercises' do
     xit 'returns "hello universe!"' do
       expect(concatenate('universe')).to eq('Hello universe!')
     end
-
   end
 
   describe 'substrings exercise' do
@@ -35,7 +34,6 @@ RSpec.describe 'String Exercises' do
     xit 'leaves an already capitalized word as is' do
       expect(capitalize('London')).to eq('London')
     end
-
   end
 
   describe 'uppercasing exercise' do
