@@ -1,36 +1,35 @@
-def concatenation_exercise(string)
-  # use concatenation with the empty string below to pass the tests
-  ""
+def concatenate(string)
+  # use concatenation to format the string like so Hello <string>!
 end
 
-def substrings_exercise(string, a, b)
-  # return a substring from the original string starting at index 'a' and endingat index 'b'
+def substrings(word)
+  # return the first 4 letters from the word using substrings
 end
 
-def capitalizing_exercise(string)
-  # return the same string, with the first letter capitalized
+def capitalize(word)
+  # capitalize the first letter of the word
 end
 
-def uppercase_exercise(string)
-  # return the same string with all of its letters uppercased
+def uppercase(string)
+  # uppercase all letters in the string
 end
 
-def downcase_exercise(string)
-  # return the same string with all of its letters downcased
+def downcase(string)
+  # downcase all letters in the string
 end
 
-def empty_exercise(string)
-  # return true if the string is empty, and false otherwise
+def empty_string(string)
+  # return true if the string is empty
 end
 
-def length_exercise(string)
-  # return a number equal to the length of the string
-end 
+def string_length(string)
+  # return the length of the string
+end
 
-def reverse_exercise(string)
+def reverse(string)
   # return the same string, with all of its characters reversed
 end
 
-def remover_exercise(string)
-  # return the same string with all of its white space removed
+def space_remover(string)
+  # remove all the spaces in the string using gsub
 end
