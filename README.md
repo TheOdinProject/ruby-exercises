@@ -22,7 +22,7 @@ Then run the following command:
 
 This folder contains a Gemfile, which tells bundle which gems to install locally and makes them available for use in that directory. In this case, we are installing RSpec, which is a popular Ruby testing framework.
 
-Verify that the installation was succesful by simply running the following command:
+Verify that the installation was successful by simply running the following command:
 
     rspec
 
