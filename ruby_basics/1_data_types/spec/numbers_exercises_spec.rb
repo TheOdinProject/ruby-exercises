@@ -12,14 +12,14 @@ RSpec.describe 'Numbers Exercises' do
 
   describe 'subtraction exercise' do
 
-    # remove the 'x' from the line below to unskip the test
-    xit 'subtracts two numbers' do
+    it 'subtracts two numbers' do
       expect(subtract(5, 3)).to eq(2)
     end
   end
-
+  
   describe 'multiplication exercise' do
-
+    
+    # remove the 'x' from the line below to unskip the test
     xit 'multiplies two numbers' do
       expect(multiply(5, 5)).to eq(25)
     end

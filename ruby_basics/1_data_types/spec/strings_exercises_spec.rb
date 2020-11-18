@@ -3,13 +3,20 @@ require_relative '../exercises/string_exercises'
 
 RSpec.describe 'String Exercises' do
 
+  describe 'concatenation example exercise' do
+
+    it 'returns "Classic Ruby"' do
+      expect(concatenate_example('Ruby')).to eq('Classic Ruby')
+    end
+  end
+
   describe 'concatenation exercise' do
 
-    it 'returns "hello world!"' do
+    it 'returns "Hello world!"' do
       expect(concatenate('world')).to eq('Hello world!')
     end
 
-    xit 'returns "hello universe!"' do
+    xit 'returns "Hello universe!"' do
       expect(concatenate('universe')).to eq('Hello universe!')
     end
   end
