@@ -5,7 +5,7 @@ These exercises are designed to compliment the [Ruby Basic lessons](https://www.
 
 1. First change directory into the lesson directory, for example `cd 1_data_types`
 2. Run the tests for an exercise file, for example `rspec spec/numbers_exercises_spec.rb`. The first test will fail and the rest will be skipped.
-3. Open that coresponding exercise file in your text editor, in this case the `exercises/numbers_exercises.rb` file
+3. Open that corresponding exercise file in your text editor, in this case the `exercises/numbers_exercises.rb` file
 4. Write the code to get the failing test to pass in the exercise file and run the tests again to verify it passes.
 5. Go into the test file and unskip the next test by removing the `x` from `xit`.
 6. Run your tests again `rspec spec/numbers_exercises_spec.rb` the second test should now be failing.
@@ -17,3 +17,7 @@ These exercises are designed to compliment the [Ruby Basic lessons](https://www.
 
 - [ ] Numbers Exercises 
 - [ ] Strings Exercises 
+
+#### 6.Arrays
+
+- [ ] Array Exercises 
