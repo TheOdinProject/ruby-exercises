@@ -24,7 +24,7 @@ This folder contains a Gemfile, which tells bundle which gems to install locally
 
 Verify that the installation was successful by simply running the following command:
 
-    rspec
+    bundle exec rspec
 
 Which should print a few lines about not finding any examples. This is ok and means it's working!
 
