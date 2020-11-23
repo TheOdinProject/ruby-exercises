@@ -21,3 +21,7 @@ These exercises are designed to compliment the [Ruby Basic lessons](https://www.
 #### 6.Arrays
 
 - [ ] Array Exercises 
+
+#### 6.Hashes
+
+- [ ] Hash Exercises 
