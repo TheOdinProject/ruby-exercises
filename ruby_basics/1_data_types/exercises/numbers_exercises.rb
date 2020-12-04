@@ -28,9 +28,9 @@ def string_to_number(string)
 end
 
 def even?(number)
-  # return true if the number is even
+  # return true if the number is even (hint: use integer's even? method)
 end
 
 def odd?(number)
-  # return true if the number is odd
+  # return true if the number is odd (hint: use integer's odd? method)
 end
