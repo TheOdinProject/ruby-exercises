@@ -63,3 +63,7 @@ end
 def join(array, separator)
   # return the result of joining the array with the separator
 end
+
+def check_array(nums)
+   # return true or false based on whether nums exist at either beginning of the array or end->true else false
+end
