@@ -27,10 +27,40 @@ RSpec.describe 'Method Exercises' do
     end
   end
 
-  describe 'bang method exercise' do
+  describe 'year exercise' do
 
-    it 'returns ...' do
-      expect(capitalize_string('scream')).to eq('SCREAM')
+    it 'returns true when the year is between 2001 - 2100' do
+      expect(twenty_first_century?(2024)).to be true
+    end
+
+    it 'returns true when the year is 2001' do
+      expect(twenty_first_century?(2001)).to be true
+    end
+
+    it 'returns false when the year is not between 2001 - 2100' do
+      expect(twenty_first_century?(1999)).to be false
+    end
+  end
+
+  describe 'lucky exercise' do
+
+    it 'returns a string with the provided parameter' do
+      expect(lucky_number(3)).to eq("Today's lucky number is 3")
+    end
+
+    it 'returns a string with the default parameter' do
+      expect(lucky_number).to eq("Today's lucky number is 7")
+    end
+  end
+
+  describe 'explicit return exercise' do
+
+    it 'returns 65' do
+      expect(character_code('A')).to eq(65)
+    end
+
+    it 'returns invalid argument' do
+      expect(character_code('word')).to eq('Invalid argument')
     end
   end
 end
@@ -39,10 +69,12 @@ end
 
 # Creating their own methods - 2 or 3 exercises for this
 # different types of arguments -> clarify meaning?
-# MEANING -> default parameters?
-# different return values 
+# DONE - MEANING -> default parameters?
+# different return values -> clarify meaning?
+# MEANING -> return vs. puts
 # DONE - make your own predicate method (suggestion: array empty?)
-# make your own bang method (suggestion: string upcase!)
+# SKIP - make your own bang method (suggestion: string upcase!)
+# skip because using a bang method alters the object, but does not look any different than just a return value.
   
 # Ideas:
 # - loops
@@ -51,5 +83,11 @@ end
 # - include?(entry)
 # - random # - write a method called dice_roll that returns a random number between 1 - 12
 # - abs number
-
-#  return number if number.between?(0, 9) -> example of years (in a decade or century)
+# - need long form of if/else
+# def even_odd(number)
+#   if number % 2 == 0
+#     "That is an even number."
+#   else
+#     "That is an odd number."
+#   end
+# end
