@@ -55,39 +55,57 @@ RSpec.describe 'Method Exercises' do
 
   describe 'explicit return exercise' do
 
-    it 'returns 65' do
-      expect(character_code('A')).to eq(65)
+    it 'returns number for uppercase letter' do
+      expect(ascii_code('A')).to eq(65)
     end
 
-    it 'returns invalid argument' do
-      expect(character_code('word')).to eq('Invalid argument')
+    it 'returns number for lowercase letter' do
+      expect(ascii_code('z')).to eq(122)
+    end
+
+    it 'returns input error when there is more than one character' do
+      expect(ascii_code('word')).to eq('Input Error')
+    end
+  end
+
+  describe 'console output exercise' do
+
+    it 'returns the cat pun' do
+      expect { pet_pun('cat') }.to output("Cats are purr-fect!\n").to_stdout
+    end
+
+    it 'returns the dog pun' do
+      expect { pet_pun('dog') }.to output("Dogs are paw-some!\n").to_stdout
+    end
+
+    it 'returns the default pet pun' do
+      expect { pet_pun('rabbits') }.to output("I think rabbits have pet-tential!\n").to_stdout
     end
   end
 end
 
 # Lesson: https://www.theodinproject.com/courses/ruby-programming/lessons/methods
 
-# Creating their own methods - 2 or 3 exercises for this
-# different types of arguments -> clarify meaning?
-# DONE - MEANING -> default parameters?
-# different return values -> clarify meaning?
-# MEANING -> return vs. puts
-# DONE - make your own predicate method (suggestion: array empty?)
-# SKIP - make your own bang method (suggestion: string upcase!)
-# skip because using a bang method alters the object, but does not look any different than just a return value.
+# 1. Creating their own methods - 2 or 3 exercises for this
+# DONE - #alphabetical_list (using chaining)
+# **** - method using if/else statement
+# **** - 
+# 2. different types of arguments (normal and default parameters)
+# DONE - #lucky_number
+# 3. different return values (explicit and implicit returns)
+# DONE - #ascii_code  (explicit and implicit returns)
+# DONE - method using puts instead of return
+# 4. make your own predicate method (suggestion: array empty?)
+# DONE ? #divisible_by_four? 
+# DONE ? #twenty_first_century? 
+# 5. make your own bang method (suggestion: string upcase!)
+# SKIP - because using a bang method alters the object, but does not look any different than just a return value.
   
-# Ideas:
-# - loops
+# IDEAS:
 # - && ||
-# - Chaining, like phrase.reverse.join(" ").capitalize
 # - include?(entry)
-# - random # - write a method called dice_roll that returns a random number between 1 - 12
 # - abs number
-# - need long form of if/else
-# def even_odd(number)
-#   if number % 2 == 0
-#     "That is an even number."
-#   else
-#     "That is an odd number."
-#   end
-# end
+# - array intersection, sample
+# - interger#chr 
+# - hash?
+# - case statement - with downcase to match

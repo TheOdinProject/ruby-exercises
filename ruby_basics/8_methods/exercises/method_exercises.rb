@@ -30,15 +30,34 @@ def lucky_number(number = 7)
   "Today's lucky number is #{number}"
 end
 
-# method name:
-# parameter: 
-# return value: 
-def character_code(character)
+# method name: #ascii_code
+# parameter: character (a string)
+# return value: the character's ordinal number
+# explicit return value: 'Input Error' if character is more than one character
+# hint: use String#ord (https://rubyapi.org/2.7/o/string#method-i-ord)
+def ascii_code(character)
   unless character.length == 1
-    return 'Invalid argument'
+    return 'Input Error'
   end
 
   character.ord
+end
+
+# method name: #pet_pun
+# parameter: animal (a string)
+# return value: nil
+# console output: if the animal is a cat, 'Cats are purr-fect!' (perfect)
+# console output: if the animal is a dog, 'Dogs are paw-some!' (awesome)
+# console output: otherwise, "I think <animal>s have pet-tential!" (potential)
+
+def pet_pun(animal)
+  if animal == 'cat'
+    puts 'Cats are purr-fect!'
+  elsif animal == 'dog'
+    puts 'Dogs are paw-some!'
+  else
+    puts "I think #{animal} have pet-tential!"
+  end
 end
 
 # method name:
