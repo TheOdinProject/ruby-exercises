@@ -9,6 +9,8 @@ RSpec.describe 'Method Exercises' do
       expect(alphabetical_list(games)).to eq(['Chess', 'Othello', 'Scrabble'])
     end
     
+    # CHANGE INTO GAMES, NOT SPORTS
+
     # remove the 'x' from the line below to unskip the test
     it 'returns an sorted array removing multiple duplicates' do
       games = ['Tennis', 'Baseball', 'Baseball', 'Soccer', 'Tennis', 'Tennis']
@@ -70,6 +72,10 @@ RSpec.describe 'Method Exercises' do
 
   describe 'console output exercise' do
 
+    it 'returns nil' do
+      expect(pet_pun('cat')).to be nil
+    end
+
     it 'returns the cat pun' do
       expect { pet_pun('cat') }.to output("Cats are purr-fect!\n").to_stdout
     end
@@ -79,7 +85,37 @@ RSpec.describe 'Method Exercises' do
     end
 
     it 'returns the default pet pun' do
-      expect { pet_pun('rabbits') }.to output("I think rabbits have pet-tential!\n").to_stdout
+      expect { pet_pun('rabbit') }.to output("I think rabbits have pet-tential!\n").to_stdout
+    end
+  end
+
+  describe 'ASCII translator exercise' do
+
+    it 'returns an uppercase A' do
+      expect(ascii_translator(65)).to eq('A')
+    end
+
+    it 'returns a lowercase z' do
+      expect(ascii_translator(122)).to eq('z')
+    end
+
+    it 'returns an exclamation mark' do
+      expect(ascii_translator(33)).to eq('!')
+    end
+  end
+
+  describe 'hash fetch exercise' do
+
+    it 'returns ...' do
+      first = ['tennis', 'football', 'wrestling']
+      second = ['baseball', 'basketball', 'tennis']
+      expect(sports_in_common(first, second)).to eq(['tennis'])
+    end
+
+    it 'returns an empty array when no...' do
+      first = ['tennis', 'football', 'wrestling']
+      second = ['baseball', 'basketball']
+      expect(sports_in_common(first, second)).to eq([])
     end
   end
 end
@@ -88,24 +124,15 @@ end
 
 # 1. Creating their own methods - 2 or 3 exercises for this
 # DONE - #alphabetical_list (using chaining)
-# **** - method using if/else statement
-# **** - 
+# DONE - #ascii_translator
+# DONE - #sports_in_common
 # 2. different types of arguments (normal and default parameters)
-# DONE - #lucky_number
+# DONE - #lucky_number (normal and default parameters)
 # 3. different return values (explicit and implicit returns)
-# DONE - #ascii_code  (explicit and implicit returns)
-# DONE - method using puts instead of return
+# DONE - #ascii_code (explicit and implicit returns)
+# DONE - #pet_pun (using puts instead of return & if/else statement)
 # 4. make your own predicate method (suggestion: array empty?)
 # DONE ? #divisible_by_four? 
 # DONE ? #twenty_first_century? 
 # 5. make your own bang method (suggestion: string upcase!)
 # SKIP - because using a bang method alters the object, but does not look any different than just a return value.
-  
-# IDEAS:
-# - && ||
-# - include?(entry)
-# - abs number
-# - array intersection, sample
-# - interger#chr 
-# - hash?
-# - case statement - with downcase to match

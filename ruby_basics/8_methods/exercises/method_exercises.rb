@@ -2,9 +2,8 @@
 
 # method name: #alphabetical_list
 # parameter: games (an array)
-# return value: games with the two following array methods chained together
-# sort (orders the items alphabetically)
-# uniq (removes any duplicates)
+# return value: games, alphabetically sorted and duplicates removed
+# hint: chain Array#sort and Array#uniq together
 def alphabetical_list(games)
   games.sort.uniq
 end
@@ -34,7 +33,7 @@ end
 # parameter: character (a string)
 # return value: the character's ordinal number
 # explicit return value: 'Input Error' if character is more than one character
-# hint: use String#ord (https://rubyapi.org/2.7/o/string#method-i-ord)
+# hint: use String#ord
 def ascii_code(character)
   unless character.length == 1
     return 'Input Error'
@@ -46,20 +45,32 @@ end
 # method name: #pet_pun
 # parameter: animal (a string)
 # return value: nil
-# console output: if the animal is a cat, 'Cats are purr-fect!' (perfect)
-# console output: if the animal is a dog, 'Dogs are paw-some!' (awesome)
+# console output: if animal is 'cat', 'Cats are purr-fect!' (perfect)
+# console output: if animal is 'dog', 'Dogs are paw-some!' (awesome)
 # console output: otherwise, "I think <animal>s have pet-tential!" (potential)
-
 def pet_pun(animal)
   if animal == 'cat'
     puts 'Cats are purr-fect!'
   elsif animal == 'dog'
     puts 'Dogs are paw-some!'
   else
-    puts "I think #{animal} have pet-tential!"
+    puts "I think #{animal}s have pet-tential!"
   end
 end
 
-# method name:
-# parameter: 
-# return value: 
+# method name: #ascii_translator
+# parameter: number
+# return value: the number's ASCII character (https://www.ascii-code.com/)
+# hint: use Integer#chr
+def ascii_translator(number)
+  number.chr
+end
+
+# method name: #sports_in_common
+# parameters: my_sports and your_sports (both arrays)
+# return value: an array containg elements in both...
+# tip: use Array#intersection 
+
+def sports_in_common(my_sports, your_sports)
+  my_sports.intersection(your_sports)
+end
