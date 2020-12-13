@@ -1,5 +1,21 @@
 # Now it your turn to write the entire method to pass tests one at a time
 
+# method name: #ascii_translator
+# parameter: number
+# return value: the number's ASCII character (https://www.ascii-code.com/)
+# hint: use Integer#chr
+def ascii_translator(number)
+  number.chr
+end
+
+# method name: #common_sports
+# parameters: current_sports and favorite_sports (both arrays)
+# return value: an array containg elements in both...
+# tip: use Array#intersection 
+def common_sports(current_sports, favorite_sports)
+  current_sports.intersection(favorite_sports)
+end
+
 # method name: #alphabetical_list
 # parameter: games (an array)
 # return value: games, alphabetically sorted and duplicates removed
@@ -8,19 +24,6 @@ def alphabetical_list(games)
   games.sort.uniq
 end
 
-# method name: #divisible_by_four?
-# parameter: year (an integer)
-# return value: true if the year is evenly divided by 4, otherwise return false
-def divisible_by_four?(year)
-  year % 4 == 0
-end
-
-# method name: #twenty_first_century?
-# parameter: year (an integer)
-# return value: true if the year is between 2001 - 2100, otherwise return false
-def twenty_first_century?(year)
-  year.between?(2001, 2100)
-end
 
 # method name: #lucky_number
 # parameter: number with default value of 7
@@ -58,19 +61,9 @@ def pet_pun(animal)
   end
 end
 
-# method name: #ascii_translator
-# parameter: number
-# return value: the number's ASCII character (https://www.ascii-code.com/)
-# hint: use Integer#chr
-def ascii_translator(number)
-  number.chr
-end
-
-# method name: #sports_in_common
-# parameters: my_sports and your_sports (both arrays)
-# return value: an array containg elements in both...
-# tip: use Array#intersection 
-
-def sports_in_common(my_sports, your_sports)
-  my_sports.intersection(your_sports)
+# method name: #twenty_first_century?
+# parameter: year (an integer)
+# return value: true if the year is between 2001 - 2100, otherwise return false
+def twenty_first_century?(year)
+  year.between?(2001, 2100)
 end

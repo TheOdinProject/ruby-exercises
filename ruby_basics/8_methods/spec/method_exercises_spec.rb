@@ -2,49 +2,53 @@ require 'spec_helper'
 require_relative '../exercises/method_exercises'
 
 RSpec.describe 'Method Exercises' do
-  describe 'chaining methods exercise' do
+
+  describe 'ASCII translator exercise' do
+
+    it 'returns an uppercase A' do
+      expect(ascii_translator(65)).to eq('A')
+    end
+
+    # remove the 'x' from the line below to unskip the test
+    it 'returns a lowercase z' do
+      expect(ascii_translator(122)).to eq('z')
+    end
+
+    it 'returns an exclamation mark' do
+      expect(ascii_translator(33)).to eq('!')
+    end
+  end
+
+  describe 'common sports exercise using #intersection' do
+
+    it 'returns the common sports' do
+      current = ['tennis', 'football', 'baseball']
+      favorite = ['baseball', 'tennis', 'basketball']
+      expect(common_sports(current, favorite)).to eq(['tennis', 'baseball'])
+    end
+
+    it 'returns an empty array when there are no common sports' do
+      current = ['tennis', 'football', 'wrestling']
+      favorite = ['baseball', 'basketball']
+      expect(common_sports(current, favorite)).to eq([])
+    end
+  end
+
+  describe 'alphabetical list exercise using #sort and #uniq chained' do
 
     it 'returns an sorted array removing one duplicate' do
       games = ['Chess', 'Scrabble', 'Othello', 'Chess']
       expect(alphabetical_list(games)).to eq(['Chess', 'Othello', 'Scrabble'])
     end
     
-    # CHANGE INTO GAMES, NOT SPORTS
-
-    # remove the 'x' from the line below to unskip the test
     it 'returns an sorted array removing multiple duplicates' do
-      games = ['Tennis', 'Baseball', 'Baseball', 'Soccer', 'Tennis', 'Tennis']
-      expect(alphabetical_list(games)).to eq(['Baseball', 'Soccer', 'Tennis'])
+      games = ['Monopoly', 'Checkers', 'Risk', 'Checkers', 'Risk', 'Checkers']
+      expect(alphabetical_list(games)).to eq(['Checkers', 'Monopoly', 'Risk'])
     end
   end
 
-  describe 'divisible by four exercise' do
 
-    it 'returns true when the year is divisible by 4' do
-      expect(divisible_by_four?(2024)).to be true
-    end
-
-    it 'returns false when the year is not divisible by 4' do
-      expect(divisible_by_four?(1999)).to be false
-    end
-  end
-
-  describe 'year exercise' do
-
-    it 'returns true when the year is between 2001 - 2100' do
-      expect(twenty_first_century?(2024)).to be true
-    end
-
-    it 'returns true when the year is 2001' do
-      expect(twenty_first_century?(2001)).to be true
-    end
-
-    it 'returns false when the year is not between 2001 - 2100' do
-      expect(twenty_first_century?(1999)).to be false
-    end
-  end
-
-  describe 'lucky exercise' do
+  describe 'lucky number exercise using a default value' do
 
     it 'returns a string with the provided parameter' do
       expect(lucky_number(3)).to eq("Today's lucky number is 3")
@@ -55,7 +59,7 @@ RSpec.describe 'Method Exercises' do
     end
   end
 
-  describe 'explicit return exercise' do
+  describe 'ASCII code exercise using implicit and explicit return' do
 
     it 'returns number for uppercase letter' do
       expect(ascii_code('A')).to eq(65)
@@ -70,7 +74,7 @@ RSpec.describe 'Method Exercises' do
     end
   end
 
-  describe 'console output exercise' do
+  describe 'pet pun exercise using console output' do
 
     it 'returns nil' do
       expect(pet_pun('cat')).to be nil
@@ -89,33 +93,19 @@ RSpec.describe 'Method Exercises' do
     end
   end
 
-  describe 'ASCII translator exercise' do
 
-    it 'returns an uppercase A' do
-      expect(ascii_translator(65)).to eq('A')
+  describe 'twenty-first century exercise using boolean values' do
+
+    it 'returns true when the year is between 2001 - 2100' do
+      expect(twenty_first_century?(2024)).to be true
     end
 
-    it 'returns a lowercase z' do
-      expect(ascii_translator(122)).to eq('z')
+    it 'returns true when the year is 2001' do
+      expect(twenty_first_century?(2001)).to be true
     end
 
-    it 'returns an exclamation mark' do
-      expect(ascii_translator(33)).to eq('!')
-    end
-  end
-
-  describe 'hash fetch exercise' do
-
-    it 'returns ...' do
-      first = ['tennis', 'football', 'wrestling']
-      second = ['baseball', 'basketball', 'tennis']
-      expect(sports_in_common(first, second)).to eq(['tennis'])
-    end
-
-    it 'returns an empty array when no...' do
-      first = ['tennis', 'football', 'wrestling']
-      second = ['baseball', 'basketball']
-      expect(sports_in_common(first, second)).to eq([])
+    it 'returns false when the year is not between 2001 - 2100' do
+      expect(twenty_first_century?(1999)).to be false
     end
   end
 end
@@ -123,16 +113,15 @@ end
 # Lesson: https://www.theodinproject.com/courses/ruby-programming/lessons/methods
 
 # 1. Creating their own methods - 2 or 3 exercises for this
-# DONE - #alphabetical_list (using chaining)
 # DONE - #ascii_translator
 # DONE - #sports_in_common
+# DONE - #alphabetical_list (using chaining)
 # 2. different types of arguments (normal and default parameters)
 # DONE - #lucky_number (normal and default parameters)
 # 3. different return values (explicit and implicit returns)
 # DONE - #ascii_code (explicit and implicit returns)
 # DONE - #pet_pun (using puts instead of return & if/else statement)
 # 4. make your own predicate method (suggestion: array empty?)
-# DONE ? #divisible_by_four? 
-# DONE ? #twenty_first_century? 
+# DONE - #twenty_first_century? 
 # 5. make your own bang method (suggestion: string upcase!)
 # SKIP - because using a bang method alters the object, but does not look any different than just a return value.
