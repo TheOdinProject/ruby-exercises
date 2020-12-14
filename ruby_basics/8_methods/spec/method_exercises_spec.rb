@@ -80,6 +80,7 @@ RSpec.describe 'Method Exercises' do
   describe 'pet pun exercise using console output' do
 
     xit 'returns nil' do
+      allow_any_instance_of(Object).to receive(:puts).with("Cats are purr-fect!")
       expect(pet_pun('cat')).to be nil
     end
 
