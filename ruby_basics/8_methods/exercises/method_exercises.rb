@@ -38,6 +38,7 @@
 # console output: if animal is 'cat', 'Cats are purr-fect!' (perfect)
 # console output: if animal is 'dog', 'Dogs are paw-some!' (awesome)
 # console output: otherwise, "I think <animal>s have pet-tential!" (potential)
+# hint: use puts
 
 
 # method name: #twenty_first_century?
