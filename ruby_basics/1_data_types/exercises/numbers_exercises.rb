@@ -4,7 +4,7 @@ def add(a, b)
 end
 
 def subtract(a, b)
-  # return the result of subtracting a from b
+  # return the result of subtracting b from a
 end
 
 def multiply(a, b)
@@ -12,7 +12,7 @@ def multiply(a, b)
 end
 
 def divide(a, b)
-  # return the resut of dividing a by b
+  # return the result of dividing a by b
 end
 
 def remainder(a, b)
