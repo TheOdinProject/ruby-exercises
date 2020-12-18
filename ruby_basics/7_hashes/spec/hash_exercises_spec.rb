@@ -54,7 +54,7 @@ RSpec.describe 'Hash Exercises' do
     end
   end
 
-  describe 'update favorite number exercise' do
+  describe 'update favorite movie exercise' do
 
     xit 'returns hash with a new key/value pair when not included' do
       my_favorites = { color: 'blue', number: 65 }
