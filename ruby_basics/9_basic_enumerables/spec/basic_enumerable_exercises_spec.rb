@@ -3,118 +3,91 @@ require_relative '../exercises/basic_enumerable_exercises'
 
 RSpec.describe 'Method Exercises' do
 
-  describe 'exercise' do
+  describe 'display current inventory exercise' do
 
     it 'outputs each inventory item' do
       list = { apples: 1, bananas: 3, oranges: 7 }
-      expect($stdout).to receive(:puts).with("apples: 1")
-      expect($stdout).to receive(:puts).with("bananas: 3")
-      expect($stdout).to receive(:puts).with("oranges: 7")
-      current_inventory(list)
+      expect($stdout).to receive(:puts).with("apples, quantity: 1")
+      expect($stdout).to receive(:puts).with("bananas, quantity: 3")
+      expect($stdout).to receive(:puts).with("oranges, quantity: 7")
+      display_current_inventory(list)
     end
 
     # remove the 'x' from the line below to unskip the test
     it 'outputs ... when inventory item is nil' do
-      list = { pineapple: nil }
-      expect($stdout).to receive(:puts).with("pineapple: ")
-      current_inventory(list)
+      list = { pineapples: nil }
+      expect($stdout).to receive(:puts).with("pineapples, quantity: ")
+      display_current_inventory(list)
     end
   end
   
-  describe 'exercise' do
+  describe 'display guess order exercise' do
     
     it 'outputs ...' do
-      array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-      expect($stdout).to receive(:puts).with(0)
-      expect($stdout).to receive(:puts).with(3)
-      expect($stdout).to receive(:puts).with(6)
-      expect($stdout).to receive(:puts).with(9)
-      index_method(array)
-    end
-
-    it 'outputs ... when nil' do
-      array = [nil, nil, nil]
-      expect($stdout).to receive(:puts).with(nil)
-      index_method(array)
+      guesses = ['cookies', 'cake', 'ice cream']
+      expect($stdout).to receive(:puts).with("Guess #1 is cookies")
+      expect($stdout).to receive(:puts).with("Guess #2 is cake")
+      expect($stdout).to receive(:puts).with("Guess #3 is ice cream")
+      display_guess_order(guesses)
     end
   end
 
-  describe 'exercise' do
+  describe 'convert to positive exercise' do
     
     it 'outputs ...' do
-      array = ['Amy', 'Brad', 'Carl', 'Drew']
-      expect(map_method(array)).to eq(['Yma', 'Darb', 'Lrac', 'Werd'])
+      array = [1, -2, 3]
+      expect(convert_to_positive(array)).to eq([1, 2, 3])
     end
-    
+
     it 'outputs ...' do
-      array = ['Larry', 'Max', 'Ned']
-      expect(map_method(array)).to eq(["Yrral", "Xam", "Den"])
+      array = [1, -2, 3, 0]
+      expect(convert_to_positive(array)).to eq([1, 2, 3, 0])
     end
   end
 
-  describe 'exercise' do
+  describe 'low inventory exercise' do
     
     it 'outputs ...' do
       list = { apples: 1, bananas: 3, oranges: 7 }
-      expect(low_inventory(list)).to eq(list = { apples: 1, bananas: 3 })
+      expect(low_inventory(list)).to eq({ apples: 1, bananas: 3 })
     end
 
     it 'outputs ...' do
       list = { apples: 1, bananas: 3, oranges: 7, pineapple: 0 }
-      expect(low_inventory(list)).to eq(list = { apples: 1, bananas: 3, pineapple: 0 })
+      expect(low_inventory(list)).to eq({ apples: 1, bananas: 3, pineapple: 0 })
+    end
+  end
+
+  describe 'longest word exercise' do
+    
+    it 'outputs ...' do
+      list = ['cat', 'sheep', 'bear']
+      expect(longest_word(list)).to eq('sheep')
+    end
+  end
+
+  describe 'reduce with default word exercise' do
+
+    it 'outputs ...' do
+      list = ['cat', 'sheep', 'bear']
+      expect(longest_word_default(list)).to eq('sheep')
+    end
+  end
+
+  describe 'reduce with memo word exercise' do
+    
+    it 'outputs ...' do
+      list = ['cat', 'sheep', 'bear']
+      expect(longest_word_comparison(list, 'piglet')).to eq('piglet')
+    end
+  end
+
+  describe 'word length list exercise' do
+    
+    it 'outputs ...' do
+      array = ['red', 'blue', 'green']
+      result = { 'red' => 3, 'blue' => 4, 'green' => 5 }
+      expect(word_length_list(array)).to eq(result)
     end
   end
 end
-
-# Lesson: https://www.theodinproject.com/courses/ruby-programming/lessons/basic-enumerable-methods
-
-#  each
-#  each_with_index
-#  map
-#  select
-#  reduce
-#  bang versions -> SKIP?
-
-# EACH
-# Chuck Norris example?
-# friends.each { |friend| puts "Hello, " + friend }
-
-# my_array.each do |num|
-#   num *= 2
-#   puts "The new number is #{num}."
-# end
-
-# my_hash.each { |key, value| puts "#{key} is #{value}" }
-
-# my_hash.each { |pair| puts "the pair is #{pair}" }
-# contact_info = { 'name' => 'Bob', 'phone' => '111-111-1111' } 
-# contact_info.each { |key, value| print key + ' = ' + value + "\n" } 
-
-# EACH WITH INDEX
-# fruits.each_with_index { |fruit, index| puts fruit if index.even? }
-# Just like with the #each method, #each_with_index returns the original array it’s called on.
-
-# MAP
-# friends.map { |friend| friend.upcase }
-
-# my_order.map { |item| item.gsub('medium', 'extra large') }
-
-# salaries.map { |salary| salary - 700 }
-# Whenever you want to return a new array with the results of running your block of code, #map is the method for you!
-
-# SELECT
-# friends.select { |friend| friend != 'Brian' }
-
-# responses = { 'Sharon' => 'yes', 'Leo' => 'no', 'Leila' => 'no', 'Arun' => 'yes' }
-# responses.select { |person, response| response == 'yes'}
-
-# REDUCE
-# my_numbers.reduce { |sum, number| sum + number }
-# my_numbers.reduce(1000) { |sum, number| sum + number }
-
-# votes = ["Bob's Dirty Burger Shack", "St. Mark's Bistro", "Bob's Dirty Burger Shack"]
-
-# votes.reduce(Hash.new(0)) do |result, vote|
-#   result[vote] += 1
-#   result
-# end
