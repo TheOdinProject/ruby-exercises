@@ -8,17 +8,17 @@ def display_guess_order(array)
   end
 end
 
-def convert_to_positive(array)
+def find_absolute_values(array)
   array.map do |item|
     item.abs
   end
 end
 
-def low_inventory(list)
+def find_low_inventory(list)
   list.select { |key, value| value < 4 } 
 end
 
-def longest_word(word_list)
+def find_longest_word(word_list)
   word_list.reduce do |memo, word|
     if memo.length > word.length
       memo
@@ -28,17 +28,14 @@ def longest_word(word_list)
   end
 end
 
-def longest_word_comparison(word_list, memo)
-  word_list.reduce(memo) do |memo, word|
-    if memo.length > word.length
-      memo
-    else
-      word
-    end
+def find_longer_words(word_list, base_word)
+  word_list.reduce([]) do |memo, word|
+    memo << word if word.length > base_word.length
+    memo
   end
 end
 
-def word_length_list(word_list)
+def find_word_lengths(word_list)
   word_list.reduce({}) do |memo, word|
     memo[word] = word.length
     memo
