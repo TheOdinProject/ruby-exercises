@@ -34,60 +34,71 @@ RSpec.describe 'Method Exercises' do
 
   describe 'convert to positive exercise' do
     
-    it 'outputs ...' do
-      array = [1, -2, 3]
-      expect(convert_to_positive(array)).to eq([1, 2, 3])
+    it 'returns an array of positive integers' do
+      numbers = [0, -7, 14, -21]
+      result = [0, 7, 14, 21]
+      expect(convert_to_positive(numbers)).to eq(result)
     end
 
-    it 'outputs ...' do
-      array = [1, -2, 3, 0]
-      expect(convert_to_positive(array)).to eq([1, 2, 3, 0])
+    it 'returns an array with positive floating numbers' do
+      numbers = [-3.14, 6.28, -9.42]
+      result = [3.14, 6.28, 9.42]
+      expect(convert_to_positive(numbers)).to eq(result)
     end
   end
 
   describe 'low inventory exercise' do
     
-    it 'outputs ...' do
+    it 'returns ...' do
       list = { apples: 1, bananas: 3, oranges: 7 }
       expect(low_inventory(list)).to eq({ apples: 1, bananas: 3 })
     end
 
-    it 'outputs ...' do
-      list = { apples: 1, bananas: 3, oranges: 7, pineapple: 0 }
-      expect(low_inventory(list)).to eq({ apples: 1, bananas: 3, pineapple: 0 })
+    it 'returns ...' do
+      list = { chocolate_cake: 1.5, vanilla_cake: 4.25, carrot_cake: 3.75 }
+      result = { chocolate_cake: 1.5, carrot_cake: 3.75 }
+      expect(low_inventory(list)).to eq(result)
     end
   end
 
   describe 'longest word exercise' do
     
-    it 'outputs ...' do
-      list = ['cat', 'sheep', 'bear']
-      expect(longest_word(list)).to eq('sheep')
+    it 'returns the longest word' do
+      list = ['cat', 'horse', 'deer']
+      expect(longest_word(list)).to eq('horse')
     end
-  end
 
-  describe 'reduce with default word exercise' do
-
-    it 'outputs ...' do
-      list = ['cat', 'sheep', 'bear']
-      expect(longest_word_default(list)).to eq('sheep')
+    it 'returns the last word when they are all the same length' do
+      animals = ['cat', 'dog', 'fox', 'bee', 'owl']
+      expect(longest_word(animals)).to eq('owl')
     end
   end
 
   describe 'reduce with memo word exercise' do
     
-    it 'outputs ...' do
-      list = ['cat', 'sheep', 'bear']
-      expect(longest_word_comparison(list, 'piglet')).to eq('piglet')
+    it 'returns the longest word' do
+      animals = ['cat', 'horse', 'lion', 'panda']
+      expect(longest_word_comparison(animals, 'rabbit')).to eq('rabbit')
+    end
+
+    it 'returns the last word when they are all the same length' do
+      animals = ['cat', 'dog', 'fox', 'bee', 'owl']
+      expect(longest_word_comparison(animals, 'pig')).to eq('owl')
     end
   end
 
   describe 'word length list exercise' do
     
-    it 'outputs ...' do
-      array = ['red', 'blue', 'green']
-      result = { 'red' => 3, 'blue' => 4, 'green' => 5 }
-      expect(word_length_list(array)).to eq(result)
+    it 'returns a hash with strings and integers' do
+      animals = ['cat', 'horse', 'rabbit', 'deer']
+      result = { 'cat' => 3, 'horse' => 5, 'rabbit' => 6, 'deer' => 4 }
+      expect(word_length_list(animals)).to eq(result)
+    end
+    
+    it 'returns a hash with symbols and integers' do
+      symbols = [:cat, :horse, :rabbit, :deer]
+      result = { cat: 3, horse: 5, rabbit: 6, deer: 4 }
+      expect(word_length_list(symbols)).to eq(result)
     end
   end
 end

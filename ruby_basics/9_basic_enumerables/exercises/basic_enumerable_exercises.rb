@@ -28,16 +28,6 @@ def longest_word(word_list)
   end
 end
 
-def longest_word_default(word_list, memo = '')
-  word_list.reduce(memo) do |memo, word|
-    if memo.length > word.length
-      memo
-    else
-      word
-    end
-  end
-end
-
 def longest_word_comparison(word_list, memo)
   word_list.reduce(memo) do |memo, word|
     if memo.length > word.length
