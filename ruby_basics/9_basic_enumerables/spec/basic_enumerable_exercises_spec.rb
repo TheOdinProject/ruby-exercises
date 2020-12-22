@@ -73,8 +73,8 @@ RSpec.describe 'Method Exercises' do
   describe 'find longest word exercise' do
     
     it 'returns the longest word' do
-      list = ['cat', 'horse', 'deer']
-      expect(find_longest_word(list)).to eq('horse')
+      list = ['cat', 'horse', 'rabbit', 'deer', 'panda']
+      expect(find_longest_word(list)).to eq('rabbit')
     end
 
     it 'returns the last word when they are all the same length' do
