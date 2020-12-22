@@ -1,7 +1,7 @@
 require 'spec_helper'
 require_relative '../exercises/basic_enumerable_exercises'
 
-RSpec.describe 'Method Exercises' do
+RSpec.describe 'Basic Enumerable Exercises' do
 
   describe 'display current inventory exercise' do
 
@@ -14,7 +14,7 @@ RSpec.describe 'Method Exercises' do
     end
 
     # remove the 'x' from the line below to unskip the test
-    it 'outputs item without quantity when value is nil' do
+    xit 'outputs item without quantity when value is nil' do
       expect($stdout).to receive(:puts).with("pineapples, quantity: ")
       fruit = { pineapples: nil }
       display_current_inventory(fruit)
@@ -23,7 +23,7 @@ RSpec.describe 'Method Exercises' do
   
   describe 'display guess order exercise' do
     
-    it 'outputs each guess of strings in order' do
+    xit 'outputs each guess of strings in order' do
       expect($stdout).to receive(:puts).with("Guess #1 is cookies")
       expect($stdout).to receive(:puts).with("Guess #2 is cake")
       expect($stdout).to receive(:puts).with("Guess #3 is ice cream")
@@ -31,7 +31,7 @@ RSpec.describe 'Method Exercises' do
       display_guess_order(guesses)
     end
 
-    it 'outputs each guess of integers in order' do
+    xit 'outputs each guess of integers in order' do
       expect($stdout).to receive(:puts).with("Guess #1 is 553")
       expect($stdout).to receive(:puts).with("Guess #2 is 554")
       expect($stdout).to receive(:puts).with("Guess #3 is 555")
@@ -42,13 +42,13 @@ RSpec.describe 'Method Exercises' do
 
   describe 'find absolute values exercise' do
     
-    it 'returns an array of positive integers' do
+    xit 'returns an array of positive integers' do
       numbers = [0, -7, 14, -21]
       result = [0, 7, 14, 21]
       expect(find_absolute_values(numbers)).to eq(result)
     end
 
-    it 'returns an array of positive floating point numbers' do
+    xit 'returns an array of positive floating point numbers' do
       numbers = [-3.14, 6.28, -9.42]
       result = [3.14, 6.28, 9.42]
       expect(find_absolute_values(numbers)).to eq(result)
@@ -57,13 +57,13 @@ RSpec.describe 'Method Exercises' do
 
   describe 'find low inventory exercise' do
     
-    it 'returns a hash with integer values' do
+    xit 'returns a hash with integer values' do
       fruit = { apples: 1, peaches: 4, bananas: 3, oranges: 7 }
       result = { apples: 1, bananas: 3 }
       expect(find_low_inventory(fruit)).to eq(result)
     end
 
-    it 'returns a hash with floating point number values' do
+    xit 'returns a hash with floating point number values' do
       cakes = { chocolate_cake: 2.5, vanilla_cake: 4.25, carrot_cake: 3.75 }
       result = { chocolate_cake: 2.5, carrot_cake: 3.75 }
       expect(find_low_inventory(cakes)).to eq(result)
@@ -72,12 +72,12 @@ RSpec.describe 'Method Exercises' do
 
   describe 'find longest word exercise' do
     
-    it 'returns the longest word' do
+    xit 'returns the longest word' do
       list = ['cat', 'horse', 'rabbit', 'deer', 'panda']
       expect(find_longest_word(list)).to eq('rabbit')
     end
 
-    it 'returns the last word when they are all the same length' do
+    xit 'returns the last word when they are all the same length' do
       animals = ['cat', 'dog', 'fox', 'bee', 'owl']
       expect(find_longest_word(animals)).to eq('owl')
     end
@@ -85,13 +85,13 @@ RSpec.describe 'Method Exercises' do
 
   describe 'find longer words exercise' do
     
-    it 'returns an array of words longer than the base word' do
+    xit 'returns an array of words longer than the base word' do
       animals = ['cat', 'horse', 'lion', 'panda', 'rabbit']
       result = ['horse', 'panda', 'rabbit']
       expect(find_longer_words(animals, 'bear')).to eq(result)
     end
 
-    it 'returns an empty array when they are all the same length' do
+    xit 'returns an empty array when they are all the same length' do
       animals = ['cat', 'dog', 'fox', 'bee', 'owl']
       result = []
       expect(find_longer_words(animals, 'pig')).to eq(result)
@@ -100,13 +100,13 @@ RSpec.describe 'Method Exercises' do
 
   describe 'find word length exercise' do
     
-    it 'returns a hash with rocket syntax when using strings' do
+    xit 'returns a hash with rocket syntax when using strings' do
       animals = ['cat', 'horse', 'rabbit', 'deer']
       result = { 'cat' => 3, 'horse' => 5, 'rabbit' => 6, 'deer' => 4 }
       expect(find_word_lengths(animals)).to eq(result)
     end
     
-    it 'returns a hash with symbols syntax when using symbols' do
+    xit 'returns a hash with symbols syntax when using symbols' do
       animals = [:cat, :horse, :rabbit, :deer]
       result = { cat: 3, horse: 5, rabbit: 6, deer: 4 }
       expect(find_word_lengths(animals)).to eq(result)
