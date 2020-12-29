@@ -6,16 +6,16 @@ def nested_array(number)
   # return an array containing the number of empty arrays
 end
 
-def first_index(array)
-  # return the first index of the array
+def first_element(array)
+  # return the first element of the array
+end
+
+def third_element(array)
+  # return the third element of the array
 end
 
 def last_three_elements(array)
   # return the last 3 elements of the array
-end
-
-def second_index(array)
-  # return the second index of the array
 end
 
 def add_element(array)
