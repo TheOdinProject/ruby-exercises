@@ -25,14 +25,25 @@ RSpec.describe 'Array Exercises' do
     end
   end
 
-  describe 'first index exercise' do
+  describe 'first element exercise' do
 
-    xit 'returns the first index of an array of numbers' do
-      expect(first_index([2, 4, 6, 8, 10])).to eq(2)
+    xit 'returns the first element of an array of numbers' do
+      expect(first_element([2, 4, 6, 8, 10])).to eq(2)
     end
 
-    xit 'returns the first index of an array of strings' do
-      expect(first_index(['foo', 'bar'])).to eq('foo')
+    xit 'returns the first element of an array of strings' do
+      expect(first_element(['foo', 'bar'])).to eq('foo')
+    end
+  end
+
+  describe 'third element exercise' do
+
+    xit 'returns the third element of an array of numbers' do
+      expect(third_element([2, 4, 6, 8, 10])).to eq(6)
+    end
+
+    xit 'returns nil if the array does not have a third element' do
+      expect(third_element(['foo', 'bar'])).to eq(nil)
     end
   end
 
@@ -44,17 +55,6 @@ RSpec.describe 'Array Exercises' do
 
     xit 'returns all of the elements when there are less than 3 elements' do
       expect(last_three_elements(['foo', 'bar'])).to eq(['foo', 'bar'])
-    end
-  end
-
-  describe 'second index exercise' do
-
-    xit 'returns the second index of an array' do
-      expect(second_index([2, 4, 6, 8, 10])).to eq(6)
-    end
-
-    xit 'returns nil if the array does not have a second index' do
-      expect(second_index(['foo', 'bar'])).to eq(nil)
     end
   end
 
