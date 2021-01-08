@@ -16,7 +16,7 @@ end
 
 def find_low_inventory(inventory_list)
   # use #select to iterate through each item of the inventory_list (a hash)
-  # return an array of list items with values less than 4
+  # return a hash of items with values less than 4
 end
 
 def find_longest_word(word_list)
