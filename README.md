@@ -1,10 +1,10 @@
 # The Odin Project Ruby Exercises
 
-# About this repository
+## About this repository
 
 This repository is a complement to the Ruby course for The Odin Project. It contains a series of Ruby exercises alongside pre-written tests that will help guide the student towards a solution, providing a Test Driven Development experience.
 
-# Cloning and installation
+## Cloning and installation
 
 Clone this repository to your local machine. To do this, click on the green "Code" button at the top right of list of files and copy the link in the prompt. Then, run the following command in your terminal:
 
@@ -28,6 +28,6 @@ Verify that the installation was successful by simply running the following comm
 
 Which should print a few lines about not finding any examples. This is ok and means it's working!
 
-# Usage
+## Usage
 
 Each directory contains a read me with instructions for the exercises within them.
