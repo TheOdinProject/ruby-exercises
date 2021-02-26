@@ -14,17 +14,6 @@ RSpec.describe 'Array Exercises' do
     end
   end
 
-  describe 'nested array exercise' do
-    
-    xit 'returns a nested array with 4 empty arrays' do
-      expect(nested_array(4)).to eq([[], [], [], []])
-    end
-    
-    xit 'returns a nested array with 3 empty arrays' do
-      expect(nested_array(3)).to eq([[], [], []])
-    end
-  end
-
   describe 'first element exercise' do
 
     xit 'returns the first element of an array of numbers' do
