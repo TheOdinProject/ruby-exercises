@@ -1,9 +1,9 @@
 def nil_array(number)
-  # return an array containing the number of nil values
+  # return an array containing `nil` the given number of times
 end
 
 def nested_array(number)
-  # return an array containing the number of empty arrays
+  # return an array containing nested empty arrays the given number of times
 end
 
 def first_element(array)
