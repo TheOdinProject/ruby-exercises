@@ -42,4 +42,5 @@ def find_word_lengths(word_list)
   # use #reduce to iterate through each item of the word_list (an array)
   # return a hash with each word as the key and its length as the value
   # hint: use a new hash or an empty hash as the initial accumulator value
+  word_list.reduce(Hash.new(0)) { |acc, word| acc.update(word => word.length) }
 end
