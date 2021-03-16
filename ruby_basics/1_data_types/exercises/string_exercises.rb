@@ -5,6 +5,7 @@ end
 
 def concatenate(string)
   # use concatenation to format the result to be "Hello <string>!"
+  "Hello " << string << "!"
 end
 
 def substrings(word)
