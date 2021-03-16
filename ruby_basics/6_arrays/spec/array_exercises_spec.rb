@@ -9,29 +9,29 @@ RSpec.describe 'Array Exercises' do
     end
 
     # remove the 'x' from the line below to unskip the test
-    xit 'returns an array containing 2 nil values' do
+    it 'returns an array containing 2 nil values' do
       expect(nil_array(2)).to eq([nil, nil])
     end
   end
 
   describe 'nested array exercise' do
     
-    xit 'returns a nested array with 4 empty arrays' do
+    it 'returns a nested array with 4 empty arrays' do
       expect(nested_array(4)).to eq([[], [], [], []])
     end
     
-    xit 'returns a nested array with 3 empty arrays' do
+    it 'returns a nested array with 3 empty arrays' do
       expect(nested_array(3)).to eq([[], [], []])
     end
   end
 
   describe 'first element exercise' do
 
-    xit 'returns the first element of an array of numbers' do
+    it 'returns the first element of an array of numbers' do
       expect(first_element([2, 4, 6, 8, 10])).to eq(2)
     end
 
-    xit 'returns the first element of an array of strings' do
+    it 'returns the first element of an array of strings' do
       expect(first_element(['foo', 'bar'])).to eq('foo')
     end
   end

@@ -1,9 +1,10 @@
 def nil_array(number)
   # return an array containing `nil` the given number of times
+Array.new(number)
 end
 
 def nested_array(number)
-  # return an array containing nested empty arrays the given number of times
+ Array.new(number, [])
 end
 
 def first_element(array)
