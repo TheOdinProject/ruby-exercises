@@ -10,18 +10,22 @@ end
 
 def substrings(word)
   # return the first 4 letters from the word using substrings
+  word[0..3]
 end
 
 def capitalize(word)
   # capitalize the first letter of the word
+  word.capitalize
 end
 
 def uppercase(string)
   # uppercase all letters in the string
+  string.upcase
 end
 
 def downcase(string)
   # downcase all letters in the string
+  string.downcase
 end
 
 def empty_string(string)
