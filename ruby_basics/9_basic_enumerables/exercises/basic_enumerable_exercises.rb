@@ -19,21 +19,8 @@ def find_low_inventory(inventory_list)
   # return a hash of items with values less than 4
 end
 
-def find_longest_word(word_list)
-  # use #reduce to iterate through each item of the word_list (an array)
-  # return the longest word in the word_list
-  # hint: the result of each iteration should be the accumulator when its 
-  # length is greater than word.length (otherwise the result should be the word)
-end
-
-def find_longer_words(word_list, base_word)
-  # use #reduce to iterate through each item of the word_list (an array)
-  # return an array of words that is longer than the base_word (a string)
-  # hint: use a new array or an empty array as the initial accumulator value
-end
-
 def find_word_lengths(word_list)
   # use #reduce to iterate through each item of the word_list (an array)
   # return a hash with each word as the key and its length as the value
-  # hint: use a new hash or an empty hash as the initial accumulator value
+  # hint: look at the documentation and review the reduce examples in basic enumerable lesson
 end
