@@ -1,4 +1,4 @@
-# Since lesson #8 is on methods, you will be writing the entire method. 
+# Since lesson #8 is on methods, you will be writing the entire method.
 # To gain more familiarity, look up the documentation for each hint.
 # Remember to unskip the corresponding tests one at a time.
 
@@ -11,7 +11,7 @@
 # method name: #common_sports
 # parameters: current_sports and favorite_sports (both arrays)
 # return value: an array containing items in both arrays
-# hint: use Array#intersection 
+# hint: use Array#intersection
 
 
 # method name: #alphabetical_list
