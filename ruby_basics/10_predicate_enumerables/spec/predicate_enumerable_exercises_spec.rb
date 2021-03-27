@@ -16,7 +16,7 @@ RSpec.describe 'Predicate Enumerable Exercises' do
       expect(coffee_drink?(list)).to be true
     end
 
-    xit 'returns false when coffee or espress is not included' do
+    xit 'returns false when coffee or espresso is not included' do
       list = ["tea", "water", "milk"]
       expect(coffee_drink?(list)).to be false
     end
