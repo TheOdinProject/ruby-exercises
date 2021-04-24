@@ -1,5 +1,5 @@
 # Ruby Basics Exercises
-These exercises are designed to compliment the [Ruby Basic lessons](https://www.theodinproject.com/courses/ruby-programming#basic-ruby) on [The Odin Project](https://www.theodinproject.com/). Each Folder contain exercises and specs(tests) for the lessons in the Ruby Basics section.
+These exercises are designed to compliment the [Ruby Basic lessons](https://www.theodinproject.com/courses/ruby-programming#basic-ruby) on [The Odin Project](https://www.theodinproject.com/). Each folder contains exercises and specs(tests) for the lessons in the Ruby Basics section.
 
 ### Usage
 
