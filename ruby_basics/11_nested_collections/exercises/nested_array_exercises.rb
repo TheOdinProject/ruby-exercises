@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 def two_dimensional_array(number_of_nested_arrays, size_of_nested_arrays)
   # return an array that contains "number_of_nested_arrays" arrays, each
   # containing `nil` the "size_of_nested_arrays" times
