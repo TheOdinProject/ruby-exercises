@@ -2,20 +2,20 @@ require 'spec_helper'
 require_relative '../exercises/nested_array_exercises'
 
 RSpec.describe 'Nested Array Exercises' do
-  describe '2D array creation exercise' do
-    it 'returns an array containing four arrays, each containing nil two times' do
+  describe 'blank grid creation exercise' do
+    it 'returns a 2d array (grid) containing 2 rows, each containing nil 3 times' do
+      expected_output = [[nil, nil, nil], [nil, nil, nil]]
+      expect(blank_grid(2, 3)).to eq(expected_output)
+    end
+
+    it 'returns a 2d array (grid) containing 4 arrays, each containing nil 2 times' do
       expected_output = [[nil, nil], [nil, nil], [nil, nil], [nil, nil]]
-      expect(two_dimensional_array(4, 2)).to eq(expected_output)
+      expect(blank_grid(4, 2)).to eq(expected_output)
     end
 
-    it 'returns an array containing 2 arrays, each containing nil 4 times' do
-      expected_output = [[nil, nil, nil, nil], [nil, nil, nil, nil]]
-      expect(two_dimensional_array(2, 4)).to eq(expected_output)
-    end
-
-    context 'when one of the nested arrays is changed' do
-      it "doesn't change the other nested arrays" do
-        my_array = two_dimensional_array(4, 2)
+    context 'when one of the rows are changed' do
+      it "doesn't change the other rows" do
+        my_array = blank_grid(4, 2)
         my_array[2][1] = true
 
         expect(my_array).to eq([[nil, nil], [nil, nil], [nil, true], [nil, nil]])
@@ -23,73 +23,82 @@ RSpec.describe 'Nested Array Exercises' do
     end
   end
 
-  describe 'add element to nested array exercise' do
-    let(:array) { [[nil, nil], [nil, nil]] }
+  describe 'add cell to row exercise' do
+    let(:array) { [[1, 2, 3], [4, 5, 6]] }
 
-    it 'returns the array with true added to the end of the second nested array' do
-      expected_output = [[nil, nil], [nil, nil, true]]
-      expect(add_element_to_nested_array(array, 1, true)).to eq(expected_output)
+    it 'returns the array with 7 added to the end of the second row' do
+      expected_output = [[1, 2, 3], [4, 5, 6, 7]]
+      expect(add_cell_to_row(array, 1, 7)).to eq(expected_output)
     end
 
-    it 'returns the array with 13 added to the end of the first nested array' do
-      expected_output = [[nil, nil, 13], [nil, nil]]
-      expect(add_element_to_nested_array(array, 0, 13)).to eq(expected_output)
-    end
-  end
-
-  describe 'add another nested array exercise' do
-    let(:array) { [[nil, nil], [nil, nil]] }
-
-    it 'returns the array with [42] added as a third nested array' do
-      expected_output = [[nil, nil], [nil, nil], [42]]
-      expect(add_another_nested_array(array, [42])).to eq(expected_output)
-    end
-
-    it 'returns the array with [true] added as a third nested array' do
-      expected_output = [[nil, nil], [nil, nil], [true]]
-      expect(add_another_nested_array(array, [true])).to eq(expected_output)
+    it 'returns the array with 13 added to the end of the first row' do
+      expected_output = [[1, 2, 3, 13], [4, 5, 6]]
+      expect(add_cell_to_row(array, 0, 13)).to eq(expected_output)
     end
   end
 
-  describe 'delete element from nested array exercise' do
-    let(:array) { [[true, false], [true, false]] }
+  describe 'add another row exercise' do
+    let(:array) { [[1, 2, 3], [4, 5, 6]] }
 
-    it 'returns the array with the first item in the second nested array deleted' do
-      expected_output = [[true, false], [false]]
-      expect(delete_element_from_nested_array(array, 1, 0)).to eq(expected_output)
+    it 'returns the array with [7, 8, 9] added as a third row' do
+      expected_output = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+      expect(add_another_row(array, [7, 8, 9])).to eq(expected_output)
     end
 
-    it 'returns the array with the second item in the first nested array deleted' do
-      expected_output = [[true], [true, false]]
-      expect(delete_element_from_nested_array(array, 0, 1)).to eq(expected_output)
+    it 'returns the array with [5, 4, 3] added as a third row' do
+      expected_output = [[1, 2, 3], [4, 5, 6], [5, 4, 3]]
+      expect(add_another_row(array, [5, 4, 3])).to eq(expected_output)
     end
   end
 
-  describe 'delete nested array exercise' do
-    let(:array) { [[true, true], [false, false]] }
+  describe 'delete cell from grid exercise' do
+    let(:array) { [[1, 2, 3], [4, 5, 6]] }
 
-    it 'returns the array with the second nested array deleted' do
-      expected_output = [[true, true]]
-      expect(delete_a_nested_array(array, 1)).to eq(expected_output)
+    it 'returns the array with the second item in the first row deleted' do
+      expected_output = [[1, 3], [4, 5, 6]]
+      expect(delete_cell_from_grid(array, 0, 1)).to eq(expected_output)
     end
 
-    it 'returns the array with the first nested array deleted' do
-      expected_output = [[false, false]]
-      expect(delete_a_nested_array(array, 0)).to eq(expected_output)
+    it 'returns the array with the first item in the second row deleted' do
+      expected_output = [[1, 2, 3], [5, 6]]
+      expect(delete_cell_from_grid(array, 1, 0)).to eq(expected_output)
+    end
+  end
+
+  describe 'delete row exercise' do
+    let(:array) { [[1, 2], [3, 4], [5, 6]] }
+
+    it 'returns the array with the second row deleted' do
+      expected_output = [[1, 2], [5, 6]]
+      expect(delete_row_from_grid(array, 1)).to eq(expected_output)
+    end
+
+    it 'returns the array with the first row deleted' do
+      expected_output = [[3, 4], [5, 6]]
+      expect(delete_row_from_grid(array, 0)).to eq(expected_output)
     end
   end
 
   describe 'iterate over nested array exercise' do
-    let(:array) { [[true, 'I', 14], ['love', {}], [nil, :foo, 'ruby!']] }
+    let(:array) { [[7, 5, 7], [2, 7, 9]] }
 
-    it 'returns a new array with only the strings in the given array' do
-      expected_output = [['I'], ['love'], ['ruby!']]
-      expect(iterate_over_nested_array(array)).to eq(expected_output)
+    context "when there are three 7's in the given array" do
+      it 'returns the number 3' do
+        expect(iterate_over_grid(array)).to eq(3)
+      end
+    end
+
+    context "when there are four 7's in the given array" do
+      let(:array) { [[7], [8, 6, 7], [5, 3, 0, 9], [7, 7]] }
+
+      it 'returns the number 4' do
+        expect(iterate_over_grid(array)).to eq(4)
+      end
     end
 
     it 'does not mutate the original array' do
-      iterate_over_nested_array(array)
-      expect(array).to eq([[true, 'I', 14], ['love', {}], [nil, :foo, 'ruby!']])
+      iterate_over_grid(array)
+      expect(array).to eq([[7, 5, 7], [2, 7, 9]])
     end
   end
 
