@@ -1,45 +1,74 @@
-def two_dimensional_array(number_of_nested_arrays, size_of_nested_arrays)
-  # return an array that contains "number_of_nested_arrays" arrays, each
-  # containing `nil` the "size_of_nested_arrays" times
+def blank_grid(number_of_rows, number_of_columns)
+  # return a 2d array that contains `number_of_rows` nested arrays, each with
+  # `number_of_columns` entries of nil.
+
+  # Example: blank_grid(2, 3) should return
+  # [
+  #   [nil, nil, nil],
+  #   [nil, nil, nil]
+  # ]
 
   # NOTE: if one of the nested arrays is changed, the others should **not**
   # change with it
 end
 
-def add_element_to_nested_array(array, add_to_index, item_to_add)
-  # take a two dimensional array ("array"), and add "item_to_add" to the nested
-  # array that is at the "add_to_index" index of "array", then return the array
+def add_cell_to_row(grid, add_to_row, item_to_add)
+  # take a two dimensional array (`grid`) and add `item_to_add` to the nested
+  # array that is at the `add_to_row` index of `grid`, then return the array
+
+  # Example: add_cell_to_row([[1, 2, 3], [4, 5, 6]], 1, 7) should return
+  # [
+  #   [1, 2, 3],
+  #   [4, 5, 6, 7]
+  # ]
 end
 
-def add_another_nested_array(array, nested_array_to_add)
-  # take a two dimensional array ("array"), and add "nested_array_to_add" to
-  # the end of "array", then return the array
+def add_another_row(grid, row)
+  # take a two dimensional array (`grid`), and add `row` to the end of `grid`,
+  # then return the array.
+
+  # Example: add_another_row([[1, 2, 3], [4, 5, 6]], [7, 8, 9]) should return
+  # [
+  #   [1, 2, 3],
+  #   [4, 5, 6],
+  #   [7, 8, 9]
+  # ]
 end
 
-def delete_element_from_nested_array(array, nested_array_index, item_index)
-  # take a two dimensional array ("array"), and delete the item in "item_index"
-  # of the nested array at "nested_array_index" of "array", then return the
-  # array
+def delete_element_from_nested_array(grid, row_index, item_index)
+  # take a two dimensional array (`grid`), and delete the item in "item_index"
+  # of the nested array at `row_index` of `grid`, then return the array
+
+  # Example: delete_element_from_nested_array([[1, 2, 3], [4, 5, 6]], 0, 1)
+  # should return
+  # [
+  #   [1, 3],
+  #   [4, 5, 6]
+  # ]
 end
 
-def delete_a_nested_array(array, index_of_nested_array)
-  # take a two dimensional array ("array"), and delete the nested array at
-  # "index_of_nested_array" in "array", then return the array
+def delete_a_nested_array(grid, row_index)
+  # take a two dimensional array (`grid`), and delete the nested array at
+  # `row_index` in `grid`, then return the array
+
+  # Example: delete_a_nested_array([[1, 2], [3, 4], [5, 6]], 1) should return
+  # [
+  #   [1, 2],
+  #   [5, 6]
+  # ]
 end
 
-def iterate_over_nested_array(array)
-  # take a two dimensional array ("array"), and return a *new* two dimensional
-  # array with the same number of nested arrays as "array" but each only
-  # containing the strings from the equivalent nested array in "array" in the
-  # same order that they appeared in "array"
+def iterate_over_nested_array(grid)
+  # take a two dimensional array (`grid`), and return the number of times a 7
+  # appears in it
 
-  # Example: if given [['foo', 2], ['bar', nil 'baz']] this method should return
-  # [['foo'], ['bar', 'baz']]
+  # Example: iterate_over_nested_array([[7, 5, 7], [2, 7, 9]]) should return
+  # the number 3
 
-  # NOTE: "array" should **not** be mutated
+  # NOTE: `grid` should **not** be mutated
 end
 
-def iterate_over_array_of_hashes(array, key)
-  # take an array containing hash objects ("array") and a symbol as a "key",
+def iterate_over_array_of_hashes(grid, key)
+  # take an array containing hash objects (`grid`) and a symbol as a "key",
   # return an array containing all of the values for "key" in each hash
 end
