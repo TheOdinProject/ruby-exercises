@@ -35,7 +35,7 @@ def add_another_row(grid, row)
   # ]
 end
 
-def delete_element_from_nested_array(grid, row_index, item_index)
+def delete_cell_from_grid(grid, row_index, item_index)
   # take a two dimensional array (`grid`), and delete the item in "item_index"
   # of the nested array at `row_index` of `grid`, then return the array
 
@@ -47,8 +47,8 @@ def delete_element_from_nested_array(grid, row_index, item_index)
   # ]
 end
 
-def delete_a_nested_array(grid, row_index)
-  # take a two dimensional array (`grid`), and delete the nested array at
+def delete_row_from_grid(grid, row_index)
+  # take a two dimensional array (`grid`), and delete the row at
   # `row_index` in `grid`, then return the array
 
   # Example: delete_a_nested_array([[1, 2], [3, 4], [5, 6]], 1) should return
@@ -58,11 +58,11 @@ def delete_a_nested_array(grid, row_index)
   # ]
 end
 
-def iterate_over_nested_array(grid)
+def iterate_over_grid(grid)
   # take a two dimensional array (`grid`), and return the number of times a 7
   # appears in it
 
-  # Example: iterate_over_nested_array([[7, 5, 7], [2, 7, 9]]) should return
+  # Example: iterate_over_grid([[7, 5, 7], [2, 7, 9]]) should return
   # the number 3
 
   # NOTE: `grid` should **not** be mutated
