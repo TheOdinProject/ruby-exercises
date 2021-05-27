@@ -8,13 +8,13 @@ RSpec.describe 'Nested Array Exercises' do
       expect(blank_grid(2, 3)).to eq(expected_output)
     end
 
-    it 'returns a 2d array (grid) containing 4 arrays, each containing nil 2 times' do
+    xit 'returns a 2d array (grid) containing 4 arrays, each containing nil 2 times' do
       expected_output = [[nil, nil], [nil, nil], [nil, nil], [nil, nil]]
       expect(blank_grid(4, 2)).to eq(expected_output)
     end
 
     context 'when one of the rows are changed' do
-      it "doesn't change the other rows" do
+      xit "doesn't change the other rows" do
         my_array = blank_grid(4, 2)
         my_array[2][1] = true
 
@@ -26,12 +26,12 @@ RSpec.describe 'Nested Array Exercises' do
   describe 'add cell to row exercise' do
     let(:array) { [[1, 2, 3], [4, 5, 6]] }
 
-    it 'returns the array with 7 added to the end of the second row' do
+    xit 'returns the array with 7 added to the end of the second row' do
       expected_output = [[1, 2, 3], [4, 5, 6, 7]]
       expect(add_cell_to_row(array, 1, 7)).to eq(expected_output)
     end
 
-    it 'returns the array with 13 added to the end of the first row' do
+    xit 'returns the array with 13 added to the end of the first row' do
       expected_output = [[1, 2, 3, 13], [4, 5, 6]]
       expect(add_cell_to_row(array, 0, 13)).to eq(expected_output)
     end
@@ -40,12 +40,12 @@ RSpec.describe 'Nested Array Exercises' do
   describe 'add another row exercise' do
     let(:array) { [[1, 2, 3], [4, 5, 6]] }
 
-    it 'returns the array with [7, 8, 9] added as a third row' do
+    xit 'returns the array with [7, 8, 9] added as a third row' do
       expected_output = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
       expect(add_another_row(array, [7, 8, 9])).to eq(expected_output)
     end
 
-    it 'returns the array with [5, 4, 3] added as a third row' do
+    xit 'returns the array with [5, 4, 3] added as a third row' do
       expected_output = [[1, 2, 3], [4, 5, 6], [5, 4, 3]]
       expect(add_another_row(array, [5, 4, 3])).to eq(expected_output)
     end
@@ -54,12 +54,12 @@ RSpec.describe 'Nested Array Exercises' do
   describe 'delete cell from grid exercise' do
     let(:array) { [[1, 2, 3], [4, 5, 6]] }
 
-    it 'returns the array with the second item in the first row deleted' do
+    xit 'returns the array with the second item in the first row deleted' do
       expected_output = [[1, 3], [4, 5, 6]]
       expect(delete_cell_from_grid(array, 0, 1)).to eq(expected_output)
     end
 
-    it 'returns the array with the first item in the second row deleted' do
+    xit 'returns the array with the first item in the second row deleted' do
       expected_output = [[1, 2, 3], [5, 6]]
       expect(delete_cell_from_grid(array, 1, 0)).to eq(expected_output)
     end
@@ -68,12 +68,12 @@ RSpec.describe 'Nested Array Exercises' do
   describe 'delete row exercise' do
     let(:array) { [[1, 2], [3, 4], [5, 6]] }
 
-    it 'returns the array with the second row deleted' do
+    xit 'returns the array with the second row deleted' do
       expected_output = [[1, 2], [5, 6]]
       expect(delete_row_from_grid(array, 1)).to eq(expected_output)
     end
 
-    it 'returns the array with the first row deleted' do
+    xit 'returns the array with the first row deleted' do
       expected_output = [[3, 4], [5, 6]]
       expect(delete_row_from_grid(array, 0)).to eq(expected_output)
     end
@@ -83,7 +83,7 @@ RSpec.describe 'Nested Array Exercises' do
     let(:array) { [[7, 5, 7], [2, 7, 9]] }
 
     context "when there are three 7's in the given array" do
-      it 'returns the number 3' do
+      xit 'returns the number 3' do
         expect(iterate_over_grid(array)).to eq(3)
       end
     end
@@ -91,12 +91,12 @@ RSpec.describe 'Nested Array Exercises' do
     context "when there are four 7's in the given array" do
       let(:array) { [[7], [8, 6, 7], [5, 3, 0, 9], [7, 7]] }
 
-      it 'returns the number 4' do
+      xit 'returns the number 4' do
         expect(iterate_over_grid(array)).to eq(4)
       end
     end
 
-    it 'does not mutate the original array' do
+    xit 'does not mutate the original array' do
       iterate_over_grid(array)
       expect(array).to eq([[7, 5, 7], [2, 7, 9]])
     end
@@ -120,12 +120,12 @@ RSpec.describe 'Nested Array Exercises' do
       ]
     end
 
-    it 'returns an array with the value associated with the name key from each hash object' do
+    xit 'returns an array with the value associated with the name key from each hash object' do
       expected_output = %w[Ruby Javascript]
       expect(iterate_over_array_of_hashes(array, :name)).to eq(expected_output)
     end
 
-    it 'returns an array with the value associated with the facts key from each hash object' do
+    xit 'returns an array with the value associated with the facts key from each hash object' do
       expected_output = [
         ['was made for programmer happiness', 'its code is beautiful'],
         ['you have to use semicolons everywhere', "its real name isn't even javascript"]
