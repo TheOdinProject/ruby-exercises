@@ -1,8 +1,9 @@
-def blank_grid(number_of_rows, number_of_columns)
-  # return a 2d array that contains `number_of_rows` nested arrays, each with
-  # `number_of_columns` entries of nil.
+def blank_seating_chart(number_of_rows, seats_per_row)
+  # return a 2d array to represent a seating chart that contains 
+  # `number_of_rows` nested arrays, each with `seats_per_row` entries of nil to
+  # represent that each seat is empty.
 
-  # Example: blank_grid(2, 3) should return
+  # Example: blank_seating_chart(2, 3) should return:
   # [
   #   [nil, nil, nil],
   #   [nil, nil, nil]
@@ -12,60 +13,66 @@ def blank_grid(number_of_rows, number_of_columns)
   # change with it
 end
 
-def add_cell_to_row(grid, add_to_row, item_to_add)
-  # take a two dimensional array (`grid`) and add `item_to_add` to the nested
+def add_seat_to_row(chart, add_to_row, seat_to_add)
+  # take a seating chart array (`chart`) and add `seat_to_add` to the end of the nested
   # array that is at the `add_to_row` index of `grid`, then return the array
 
-  # Example: add_cell_to_row([[1, 2, 3], [4, 5, 6]], 1, 7) should return
+  # Example: add_seat_to_row([[nil, 'Bob', 'Joe'], [nil, nil, 'Bill']], 1, 'Jack')
+  # should return:
   # [
-  #   [1, 2, 3],
-  #   [4, 5, 6, 7]
+  #   [nil, 'Bob', 'Joe'],
+  #   [nil, nil, Bill, 'Jack']
   # ]
 end
 
-def add_another_row(grid, row)
-  # take a two dimensional array (`grid`), and add `row` to the end of `grid`,
+def add_another_row(chart, row)
+  # take a seating chart array (`chart`), and add `row` to the end of `chart`,
   # then return the array.
 
-  # Example: add_another_row([[1, 2, 3], [4, 5, 6]], [7, 8, 9]) should return
+  # Example:
+  # add_another_row([[nil, 'Bob', 'Joe'], [nil, nil, 'Bill']], ['Bo', nil, 'Kim'])
+  # should return:
   # [
-  #   [1, 2, 3],
-  #   [4, 5, 6],
-  #   [7, 8, 9]
+  #   [nil, 'Bob', 'Joe'],
+  #   [nil, nil, 'Bill'],
+  #   ['Bo', nil, 'Kim']
   # ]
 end
 
-def delete_cell_from_grid(grid, row_index, item_index)
-  # take a two dimensional array (`grid`), and delete the item in "item_index"
-  # of the nested array at `row_index` of `grid`, then return the array
+def delete_seat_from_row(chart, row_index, seat_index)
+  # take a two dimensional array (`chart`), and delete the seat at "seat_index"
+  # of the row at `row_index` of `chart`, then return `chart`
 
-  # Example: delete_element_from_nested_array([[1, 2, 3], [4, 5, 6]], 0, 1)
-  # should return
+  # Example:
+  # delete_seat_from_row([[nil, 'Bob', 'Joe'], [nil, nil, 'Bill']], 0, 1)
+  # should return:
   # [
-  #   [1, 3],
-  #   [4, 5, 6]
+  #   [nil, 'Joe'],
+  #   [nil, nil, 'Bill']
   # ]
 end
 
-def delete_row_from_grid(grid, row_index)
-  # take a two dimensional array (`grid`), and delete the row at
-  # `row_index` in `grid`, then return the array
+def delete_row_from_chart(chart, row_index)
+  # take a two dimensional array (`chart`), and delete the row at
+  # `row_index` in `chart`, then return the chart
 
-  # Example: delete_a_nested_array([[1, 2], [3, 4], [5, 6]], 1) should return
+  # Example:
+  # delete_row_from_chart([[nil, 'Bob'], ['Joe', nil], [nil, 'Bill']], 1)
+  # should return:
   # [
-  #   [1, 2],
-  #   [5, 6]
+  #   [nil, 'Bob'],
+  #   [nil, 'Bill']
   # ]
 end
 
-def iterate_over_grid(grid)
-  # take a two dimensional array (`grid`), and return the number of times a 7
-  # appears in it
+def iterate_over_chart(chart)
+  # take a two dimensional array (`chart`), and return the number of empty (nil)
+  # seats in it
 
-  # Example: iterate_over_grid([[7, 5, 7], [2, 7, 9]]) should return
-  # the number 3
+  # Example: iterate_over_chart([[nil, 'Bob', 'Joe'], [nil, nil, 'Bill']])
+  # should return the number 3
 
-  # NOTE: `grid` should **not** be mutated
+  # NOTE: `chart` should **not** be mutated
 end
 
 def iterate_over_array_of_hashes(grid, key)
