@@ -8,6 +8,7 @@ RSpec.describe 'Nested Array Exercises' do
       expect(blank_seating_chart(2, 3)).to eq(expected_output)
     end
 
+    # remove the 'x' from the line below to unskip the test
     xit 'returns a 2d array (chart) containing 4 arrays, each containing nil 2 times' do
       expected_output = [[nil, nil], [nil, nil], [nil, nil], [nil, nil]]
       expect(blank_seating_chart(4, 2)).to eq(expected_output)
