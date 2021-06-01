@@ -75,7 +75,7 @@ RSpec.describe 'Nested Array Exercises' do
     end
 
     xit 'returns the array with the first row deleted' do
-      expected_output = [['Joe', nil], [nil, 'Bill']] 
+      expected_output = [['Joe', nil], [nil, 'Bill']]
       expect(delete_row_from_chart(array, 0)).to eq(expected_output)
     end
   end
@@ -103,20 +103,48 @@ RSpec.describe 'Nested Array Exercises' do
     end
   end
 
+  describe 'find favorite exercise' do
+    context 'when Ruby is the favorite' do
+      let(:array) do
+        [
+          { name: 'Ruby', is_my_favorite?: true },
+          { name: 'JavaScript', is_my_favorite?: false },
+          { name: 'HTML', is_my_favorite?: false }
+        ]
+      end
+
+      xit 'returns the hash with the name Ruby' do
+        expected_output = { name: 'Ruby', is_my_favorite?: true }
+        expect(find_favorite(array)).to eq(expected_output)
+      end
+    end
+
+    context 'when there is no favorite' do
+      let(:array) do
+        [
+          { name: 'Python', is_my_favorite?: false },
+          { name: 'JavaScript', is_my_favorite?: false },
+          { name: 'HTML', is_my_favorite?: false }
+        ]
+      end
+
+      xit 'returns nil' do
+        expected_output = nil
+        expect(find_favorite(array)).to eq(expected_output)
+      end
+    end
+  end
+
   describe 'iterate over array of hashes exercise' do
     let(:array) do
       [
         {
           name: 'Ruby',
           facts: ['was made for programmer happiness', 'its code is beautiful'],
-          initial_release: 'December 25, 1996',
-          is_my_favorite: true
         },
         {
           name: 'Javascript',
           facts: ['you have to use semicolons everywhere', "its real name isn't even javascript"],
-          initial_release: 'December 4, 1995',
-          is_my_favorite: false
         }
       ]
     end
