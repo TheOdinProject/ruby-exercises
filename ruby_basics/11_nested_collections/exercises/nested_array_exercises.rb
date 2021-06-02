@@ -47,8 +47,3 @@ def find_favorite(array_of_hash_objects)
   # TIP: there will only be a maximum of one hash in the array that will
   # return true to the :is_my_favorite? key
 end
-
-def iterate_over_array_of_hashes(array_of_hash_objects, key)
-  # take an array_of_hash_objects and a key, return an array containing all the
-  # values for key in each hash
-end

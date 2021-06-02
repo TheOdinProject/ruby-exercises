@@ -134,32 +134,3 @@ RSpec.describe 'Nested Array Exercises' do
       end
     end
   end
-
-  describe 'iterate over array of hashes exercise' do
-    let(:array) do
-      [
-        {
-          name: 'Ruby',
-          facts: ['was made for programmer happiness', 'its code is beautiful'],
-        },
-        {
-          name: 'Javascript',
-          facts: ['you have to use semicolons everywhere', "its real name isn't even javascript"],
-        }
-      ]
-    end
-
-    xit 'returns an array with the value associated with the name key from each hash object' do
-      expected_output = %w[Ruby Javascript]
-      expect(iterate_over_array_of_hashes(array, :name)).to eq(expected_output)
-    end
-
-    xit 'returns an array with the value associated with the facts key from each hash object' do
-      expected_output = [
-        ['was made for programmer happiness', 'its code is beautiful'],
-        ['you have to use semicolons everywhere', "its real name isn't even javascript"]
-      ]
-      expect(iterate_over_array_of_hashes(array, :facts)).to eq(expected_output)
-    end
-  end
-end
