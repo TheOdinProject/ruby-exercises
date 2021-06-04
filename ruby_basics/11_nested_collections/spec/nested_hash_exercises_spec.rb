@@ -105,4 +105,66 @@ RSpec.describe 'Nested hash exercises' do
       expect(delete_nested_hash(hash, :javascript)).to eq(expected_output)
     end
   end
+
+  describe 'remove beautiful languages exercise' do
+    context 'when only ruby is beautiful' do
+      let(:hash) do
+        {
+          ruby: { is_beautiful?: true, initial_release: 'December 25, 1996' },
+          javascript: { is_beautiful?: false, initial_release: 'December 4, 1995' },
+          python: { is_beautiful?: false, initial_release: 'Feb 20, 1991' }
+        }
+      end
+
+      it 'returns the hash without ruby' do
+        expected_output = {
+          javascript: { is_beautiful?: false, initial_release: 'December 4, 1995' },
+          python: { is_beautiful?: false, initial_release: 'Feb 20, 1991' }
+        }
+        expect(remove_beautiful_languages(hash)).to eq(expected_output)
+      end
+    end
+
+    context 'when javascript is beautiful (never but lets pretend)' do
+      let(:hash) do
+        {
+          ruby: { is_beautiful?: false, initial_release: 'December 25, 1996' },
+          javascript: { is_beautiful?: true, initial_release: 'December 4, 1995' },
+          python: { is_beautiful?: false, initial_release: 'Feb 20, 1991' }
+        }
+      end
+
+      it 'returns the hash without javascript' do
+        expected_output = {
+          ruby: { is_beautiful?: false, initial_release: 'December 25, 1996' },
+          python: { is_beautiful?: false, initial_release: 'Feb 20, 1991' }
+        }
+        expect(remove_beautiful_languages(hash)).to eq(expected_output)
+      end
+    end
+  end
+
+  describe 'find language facts exercise' do
+    let(:hash) do
+      {
+        ruby: { facts: ['was made for programmer happiness', 'its code is beautiful'],
+                initial_release: 'December 25, 1996',
+                is_beautiful?: true },
+
+        javascript: { facts: ['you have to use semicolons everywhere', "its real name isn't even javascript"],
+                      initial_release: 'December 4, 1995',
+                      is_beautiful?: false }
+      }
+    end
+
+    it 'returns an array with the first fact given for each language' do
+      expected_output = ['was made for programmer happiness', 'you have to use semicolons everywhere']
+      expect(find_language_facts(hash, 0)).to eq(expected_output)
+    end
+
+    it 'returns an array with the second fact given for each language' do
+      expected_output = ['its code is beautiful', "its real name isn't even javascript"]
+      expect(find_language_facts(hash, 1)).to eq(expected_output)
+    end
+  end
 end
