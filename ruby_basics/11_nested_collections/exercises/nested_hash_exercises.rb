@@ -1,24 +1,24 @@
-def add_to_nested_hash(hash, add_to_hash, key, value)
-  hash[add_to_hash][key] = value
+def add_information_about_language(hash, language_name, info_key, info_value)
+  hash[language_name][info_key] = info_value
   hash
 end
 
-def add_nested_hash(hash, key_to_add, value_to_add)
-  hash[key_to_add] = value_to_add
+def add_language(hash, language_name, language_info_value)
+  hash[language_name] = language_info_value
   hash
 end
 
-def delete_from_nested_hash(hash, delete_from_hash, delete_key)
-  hash[delete_from_hash].delete(delete_key)
+def delete_information_about_language(hash, language_name, info_key)
+  hash[language_name].delete(info_key)
   hash
 end
 
-def delete_nested_hash(hash, delete_key)
-  hash.delete(delete_key)
+def delete_language(hash, language_name)
+  hash.delete(language_name)
   hash
 end
 
-def remove_beautiful_languages(hash)
+def delete_beautiful_languages(hash)
   hash.reject do |_language, data|
     data.fetch(:is_beautiful?)
   end
