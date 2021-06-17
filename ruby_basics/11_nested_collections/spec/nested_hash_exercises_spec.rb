@@ -18,7 +18,7 @@ RSpec.describe 'Nested hash exercises' do
       expect(add_information_about_language(hash, :ruby, :is_beautiful?, true)).to eq(expected_output)
     end
 
-    it "adds initial_release: 'December 4, 1995', k/v pair to the javascript nested hash" do
+    xit "adds initial_release: 'December 4, 1995', k/v pair to the javascript nested hash" do
       expected_output = {
         ruby: { initial_release: 'December 25, 1996' },
         javascript: { is_beautiful?: false, initial_release: 'December 4, 1995' }
@@ -35,7 +35,7 @@ RSpec.describe 'Nested hash exercises' do
       }
     end
 
-    it 'adds a hash about java with the included kv pairs' do
+    xit 'adds a hash about java with the included kv pairs' do
       key_to_add = :java
       value_to_add = { is_beautiful?: false, initial_release: 'May 23, 1995' }
       expected_output = {
@@ -46,7 +46,7 @@ RSpec.describe 'Nested hash exercises' do
       expect(add_language(hash, key_to_add, value_to_add)).to eq(expected_output)
     end
 
-    it 'adds a hash about python with the included kv pairs' do
+    xit 'adds a hash about python with the included kv pairs' do
       key_to_add = :python
       value_to_add = { is_beautiful?: false, initial_release: 'Feb 20, 1991' }
       expected_output = {
@@ -66,7 +66,7 @@ RSpec.describe 'Nested hash exercises' do
       }
     end
 
-    it 'removes the is_beautiful? k/v pair from the ruby nested hash' do
+    xit 'removes the is_beautiful? k/v pair from the ruby nested hash' do
       expected_output = {
         ruby: { initial_release: 'December 25, 1996' },
         javascript: { is_beautiful?: false, initial_release: 'December 4, 1995' }
@@ -74,7 +74,7 @@ RSpec.describe 'Nested hash exercises' do
       expect(delete_information_about_language(hash, :ruby, :is_beautiful?)).to eq(expected_output)
     end
 
-    it 'removes the initial_release k/v pair from the javascript nested hash' do
+    xit 'removes the initial_release k/v pair from the javascript nested hash' do
       expected_output = {
         ruby: { is_beautiful?: true, initial_release: 'December 25, 1996' },
         javascript: { is_beautiful?: false }
@@ -91,14 +91,14 @@ RSpec.describe 'Nested hash exercises' do
       }
     end
 
-    it 'removes the ruby hash' do
+    xit 'removes the ruby hash' do
       expected_output = {
         javascript: { is_beautiful?: false, initial_release: 'December 4, 1995' }
       }
       expect(delete_language(hash, :ruby)).to eq(expected_output)
     end
 
-    it 'removes the javascript hash' do
+    xit 'removes the javascript hash' do
       expected_output = {
         ruby: { is_beautiful?: true, initial_release: 'December 25, 1996' }
       }
@@ -116,7 +116,7 @@ RSpec.describe 'Nested hash exercises' do
         }
       end
 
-      it 'returns the hash without ruby' do
+      xit 'returns the hash without ruby' do
         expected_output = {
           javascript: { is_beautiful?: false, initial_release: 'December 4, 1995' },
           python: { is_beautiful?: false, initial_release: 'Feb 20, 1991' }
@@ -134,7 +134,7 @@ RSpec.describe 'Nested hash exercises' do
         }
       end
 
-      it 'returns the hash without javascript' do
+      xit 'returns the hash without javascript' do
         expected_output = {
           ruby: { is_beautiful?: false, initial_release: 'December 25, 1996' },
           python: { is_beautiful?: false, initial_release: 'Feb 20, 1991' }
@@ -157,12 +157,12 @@ RSpec.describe 'Nested hash exercises' do
       }
     end
 
-    it 'returns an array with the first fact given for each language' do
+    xit 'returns an array with the first fact given for each language' do
       expected_output = ['was made for programmer happiness', 'you have to use semicolons everywhere']
       expect(find_language_facts(hash, 0)).to eq(expected_output)
     end
 
-    it 'returns an array with the second fact given for each language' do
+    xit 'returns an array with the second fact given for each language' do
       expected_output = ['its code is beautiful', "its real name isn't even javascript"]
       expect(find_language_facts(hash, 1)).to eq(expected_output)
     end
