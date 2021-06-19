@@ -29,4 +29,15 @@ def find_language_facts(languages, fact_index)
   # Take languages (now with additional facts added to each language with the
   # key :facts and value of an array of strings) and return an array containing
   # the fact that each language has at fact_index of its facts array
+
+  # the revised languages hash will look something like this:
+  # {
+  #   ruby: { facts: ['fact 0', 'fact 1'],
+  #           initial_release: 'December 25, 1996',
+  #           is_beautiful?: true },
+
+  #   javascript: { facts: ['fact 0', "1"],
+  #                 initial_release: 'December 4, 1995',
+  #                 is_beautiful?: false }
+  # }
 end
