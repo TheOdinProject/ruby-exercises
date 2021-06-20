@@ -2,6 +2,29 @@ require 'spec_helper'
 require_relative '../exercises/nested_hash_exercises'
 
 RSpec.describe 'Nested hash exercises' do
+  describe 'find language information exercise' do
+    let(:hash) do
+      {
+        ruby: { initial_release: 'December 25, 1996', is_beautiful?: true },
+        javascript: { initial_release: 'December 4, 1995', is_beautiful?: false }
+      }
+    end
+
+    context 'when the given language name is ruby' do
+      it 'returns the information for ruby' do
+        expected_output = { initial_release: 'December 25, 1996', is_beautiful?: true }
+        expect(find_language_information(hash, :ruby)).to eq(expected_output)
+      end
+    end
+
+    context 'when the given language name is javascript' do
+      xit 'returns the information for javascript' do
+        expected_output = { initial_release: 'December 4, 1995', is_beautiful?: false }
+        expect(find_language_information(hash, :javascript)).to eq(expected_output)
+      end
+    end
+  end
+
   describe 'add information about language exercise' do
     let(:hash) do
       {
@@ -10,7 +33,7 @@ RSpec.describe 'Nested hash exercises' do
       }
     end
 
-    it 'adds is_beautiful?: true k/v pair to the ruby nested hash' do
+    xit 'adds is_beautiful?: true k/v pair to the ruby nested hash' do
       expected_output = {
         ruby: { is_beautiful?: true, initial_release: 'December 25, 1996' },
         javascript: { is_beautiful?: false }
