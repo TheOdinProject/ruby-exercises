@@ -22,7 +22,7 @@ end
 
 def delete_beautiful_languages(languages)
   # Take languages and delete any language that has the key/value pair
-  # { is_beautiful => true } listed in its information, then return languages
+  # { is_beautiful? => true } listed in its information, then return languages
 end
 
 def find_language_facts(languages, language_name, fact_index = 0)
