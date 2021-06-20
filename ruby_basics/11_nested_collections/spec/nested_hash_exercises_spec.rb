@@ -157,14 +157,14 @@ RSpec.describe 'Nested hash exercises' do
       }
     end
 
-    xit 'returns an array with the first fact given for each language' do
-      expected_output = ['was made for programmer happiness', 'you have to use semicolons everywhere']
-      expect(find_language_facts(hash, 0)).to eq(expected_output)
+    xit 'returns the first fact for ruby' do
+      expected_output = 'was made for programmer happiness'
+      expect(find_language_facts(hash, :ruby)).to eq(expected_output)
     end
 
-    xit 'returns an array with the second fact given for each language' do
-      expected_output = ['its code is beautiful', "its real name isn't even javascript"]
-      expect(find_language_facts(hash, 1)).to eq(expected_output)
+    xit 'returns the second fact for javascript' do
+      expected_output = "its real name isn't even javascript"
+      expect(find_language_facts(hash, :javascript, 1)).to eq(expected_output)
     end
   end
 end

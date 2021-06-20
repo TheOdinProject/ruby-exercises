@@ -25,10 +25,11 @@ def delete_beautiful_languages(languages)
   # { is_beautiful => true } listed in its information, then return languages
 end
 
-def find_language_facts(languages, fact_index)
+def find_language_facts(languages, language_name, fact_index = 0)
   # Take languages (now with additional facts added to each language with the
-  # key :facts and value of an array of strings) and return an array containing
-  # the fact that each language has at fact_index of its facts array
+  # key :facts and value of an array of strings) and return the fact
+  # language_name has at fact_index of its facts array, or at index 0 if this
+  # argument is not given
 
   # the revised languages hash will look something like this:
   # {
@@ -36,7 +37,7 @@ def find_language_facts(languages, fact_index)
   #           initial_release: 'December 25, 1996',
   #           is_beautiful?: true },
 
-  #   javascript: { facts: ['fact 0', "1"],
+  #   javascript: { facts: ['fact 0', 'fact 1'],
   #                 initial_release: 'December 4, 1995',
   #                 is_beautiful?: false }
   # }
