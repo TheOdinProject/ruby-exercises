@@ -29,9 +29,9 @@ def delete_language(languages, language_name)
   # languages
 end
 
-def delete_beautiful_languages(languages)
-  # Take languages and delete any language that has the key/value pair
-  # { is_beautiful? => true } listed in its information, then return languages
+def find_beautiful_languages(languages)
+  # Take languages and return a hash containing only languages which have the
+  # key/value pair { is_beautiful? => true } listed in their information
 end
 
 def find_language_facts(languages, language_name, fact_index = 0)

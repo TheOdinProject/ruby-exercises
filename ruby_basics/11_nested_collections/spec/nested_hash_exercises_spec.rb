@@ -129,7 +129,7 @@ RSpec.describe 'Nested hash exercises' do
     end
   end
 
-  describe 'delete beautiful languages exercise' do
+  describe 'find beautiful languages exercise' do
     context 'when only ruby is beautiful' do
       let(:hash) do
         {
@@ -139,30 +139,29 @@ RSpec.describe 'Nested hash exercises' do
         }
       end
 
-      xit 'returns the hash without ruby' do
+      xit 'returns a hash with only ruby' do
         expected_output = {
-          javascript: { is_beautiful?: false, initial_release: 'December 4, 1995' },
-          python: { is_beautiful?: false, initial_release: 'Feb 20, 1991' }
+          ruby: { is_beautiful?: true, initial_release: 'December 25, 1996' }
         }
-        expect(delete_beautiful_languages(hash)).to eq(expected_output)
+        expect(find_beautiful_languages(hash)).to eq(expected_output)
       end
     end
 
-    context 'when javascript is beautiful (never but lets pretend)' do
+    context 'when only javascript and python are beautiful (never but lets pretend)' do
       let(:hash) do
         {
           ruby: { is_beautiful?: false, initial_release: 'December 25, 1996' },
           javascript: { is_beautiful?: true, initial_release: 'December 4, 1995' },
-          python: { is_beautiful?: false, initial_release: 'Feb 20, 1991' }
+          python: { is_beautiful?: true, initial_release: 'Feb 20, 1991' }
         }
       end
 
-      xit 'returns the hash without javascript' do
+      xit 'returns the hash with only javascript and python' do
         expected_output = {
-          ruby: { is_beautiful?: false, initial_release: 'December 25, 1996' },
-          python: { is_beautiful?: false, initial_release: 'Feb 20, 1991' }
+          javascript: { is_beautiful?: true, initial_release: 'December 4, 1995' },
+          python: { is_beautiful?: true, initial_release: 'Feb 20, 1991' }
         }
-        expect(delete_beautiful_languages(hash)).to eq(expected_output)
+        expect(find_beautiful_languages(hash)).to eq(expected_output)
       end
     end
   end
