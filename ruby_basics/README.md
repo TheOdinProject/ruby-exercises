@@ -17,16 +17,16 @@ These exercises are designed to compliment the [Ruby Basic lessons](https://www.
 
 #### 1.Basic Data Types
 
-- [ ] Numbers Exercises
-- [ ] Strings Exercises
+- [x] Numbers Exercises
+- [x] Strings Exercises
 
 #### 6.Arrays
 
-- [ ] Array Exercises
+- [x] Array Exercises
 
 #### 7.Hashes
 
-- [ ] Hash Exercises
+- [x] Hash Exercises
 
 #### 8.Methods
 
