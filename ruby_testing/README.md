@@ -1,10 +1,10 @@
 # Ruby Testing Exercises
-These exercises are designed to compliment the Ruby Testing lessons from [The Odin Project](https://www.theodinproject.com/).
+These exercises are designed to complement the Ruby Testing lessons from [The Odin Project](https://www.theodinproject.com/).
 
 ### Usage
 
 1. Navigate to a lesson directory, for example `cd ruby_testing/1_rspec_basics`.
-2. Run the tests for the first exercise file, for example `bundle exec rspec spec/1_eq_matcher_spec.rb. **No examples should be found, because it is your turn to write the tests!**
+2. Run the tests for the first exercise file, for example `bundle exec rspec spec/1_eq_matcher_spec.rb`. **No examples should be found, because it is your turn to write the tests!**
 3. Open the exercise spec file in your text editor.
 4. Follow the instructions in the file to write **one** test.
 5. Run the tests again to verify it passes before moving on to the next test.

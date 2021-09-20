@@ -14,5 +14,5 @@ RSpec.describe 'Be Nil Matcher Exercises' do
 
   # Using the be matcher, write a test that generate_hashtag(' ' * 140) is nil
 
-  # Using the be matcher, write a test that generate_hashtag('The Odin Proejct') is not nil
+  # Using the be matcher, write a test that generate_hashtag('The Odin Project') is not nil
 end
