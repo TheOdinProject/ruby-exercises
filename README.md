@@ -24,6 +24,8 @@ Then run the following command:
 
 This folder contains a Gemfile, which tells bundle which gems to install locally and makes them available for use in that directory. In this case, we are installing RSpec, which is a popular Ruby testing framework.
 
+If you receive an error message about problems with your bundler, enter the error message under odin-tech0support on our discord and see if someone else has solved that problem already. You can also find the Bundler documentation [here](https://bundler.io/doc/troubleshooting.html).
+
 Verify that the installation was successful by simply running the following command:
 
     bundle exec rspec
