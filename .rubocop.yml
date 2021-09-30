@@ -1,0 +1,6 @@
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'ruby_basics/**/*'
+Style/Documentation:
+  Enabled: false
