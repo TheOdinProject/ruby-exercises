@@ -6,8 +6,8 @@ def correct_guess?(guess_list, answer)
   # use #any? to return true when any element of the guess_list (array) equals the answer (number)
 end
 
-def recent_years?(year_list)
-  # use #all? to return true when all of the years in the year_list (array) are between 2011 and 2021
+def twenty_first_century_years?(year_list)
+  # use #all? to return true when all of the years in the year_list (array) are between 2001 and 2100
 end
 
 def correct_format?(word_list)
