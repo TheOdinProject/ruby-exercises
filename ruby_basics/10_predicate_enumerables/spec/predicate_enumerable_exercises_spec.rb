@@ -9,7 +9,7 @@ RSpec.describe 'Predicate Enumerable Exercises' do
       drink_list = ["coffee", "water", "tea"]
       expect(coffee_drink?(drink_list)).to be true
     end
-    
+
     # remove the 'x' from the line below to unskip the test
     xit 'returns true when espresso is included' do
       drink_list = ["milk", "juice", "espresso"]
@@ -48,21 +48,21 @@ RSpec.describe 'Predicate Enumerable Exercises' do
     end
   end
 
-  describe 'recent years exercise' do
+  describe 'twenty-first century years exercise' do
 
-    xit 'returns true when all of the years are between 2011 and 2021' do
-      year_list = [2011, 2021, 2016]
-      expect(recent_years?(year_list)).to be true
+    xit 'returns true when all of the years are between 2001 and 2100' do
+      year_list = [2001, 2002, 2099, 2100]
+      expect(twenty_first_century_years?(year_list)).to be true
     end
 
-    xit 'returns false when one year is not between 2011 and 2021' do
-      year_list = [2018, 2001, 2014]
-      expect(recent_years?(year_list)).to be false
+    xit 'returns false when some of the years are not between 2001 and 2100' do
+      year_list = [2000, 2042, 2084, 2101]
+      expect(twenty_first_century_years?(year_list)).to be false
     end
 
     xit 'returns true when the list is empty' do
-      word_list = []
-      expect(recent_years?(word_list)).to be true
+      year_list = []
+      expect(twenty_first_century_years?(year_list)).to be true
     end
   end
 
