@@ -42,7 +42,7 @@ RSpec.describe 'Array Exercises' do
       expect(last_three_elements([2, 4, 6, 8, 10])).to eq([6, 8, 10])
     end
 
-    xit 'returns all of the elements when there are less than 3 elements' do
+    it 'returns all of the elements when there are less than 3 elements' do
       expect(last_three_elements(['foo', 'bar'])).to eq(['foo', 'bar'])
     end
   end
@@ -54,7 +54,7 @@ RSpec.describe 'Array Exercises' do
       expect { add_element(numbers) }.to change { numbers.length }.by(1)
     end
 
-    xit 'increases the length of an empty array by 1' do
+    it 'increases the length of an empty array by 1' do
       data = []
       expect { add_element(data) }.to change { data.length }.by(1)
     end
@@ -66,7 +66,7 @@ RSpec.describe 'Array Exercises' do
       expect(remove_last_element([1, 3, 5])).to eq([1, 3])
     end
 
-    xit 'returns an empty array when the array only has one element' do
+    it 'returns an empty array when the array only has one element' do
       expect(remove_last_element(['foo'])).to eq([])
     end
   end
@@ -77,7 +77,7 @@ RSpec.describe 'Array Exercises' do
       expect(remove_first_three_elements([1, 3, 5, 7, 9])).to eq([7, 9])
     end
 
-    xit 'returns an empty array when the array has less than 3 elements' do
+    it 'returns an empty array when the array has less than 3 elements' do
       expect(remove_first_three_elements(['foo', 'bar'])).to eq([])
     end
   end
@@ -88,7 +88,7 @@ RSpec.describe 'Array Exercises' do
       expect(array_concatenation([1, 3, 5], [2, 4, 6])).to eq([1, 3, 5, 2, 4, 6])
     end
 
-    xit 'returns an array adding arrays of strings and numbers together' do
+    it 'returns an array adding arrays of strings and numbers together' do
       expect(array_concatenation(['a', 'b', 'c'], [1, 2, 3])).to eq(['a', 'b', 'c', 1, 2, 3])
     end
   end
@@ -99,7 +99,7 @@ RSpec.describe 'Array Exercises' do
       expect(array_difference([0, 1, 1, 2, 3, 5], [0, 1, 2])).to eq([3, 5])
     end
 
-    xit 'returns an array subtracting two arrays of strings' do
+    it 'returns an array subtracting two arrays of strings' do
       expect(array_difference(['foo', 'bar', 'baz'], ['bar','hello'])).to eq(['foo', 'baz'])
     end
   end
@@ -110,7 +110,7 @@ RSpec.describe 'Array Exercises' do
       expect(empty_array?([])).to be true
     end
 
-    xit 'returns false when the array is not empty' do
+    it 'returns false when the array is not empty' do
       expect(empty_array?([1, 2, 3])).to be false
     end
   end
@@ -121,7 +121,7 @@ RSpec.describe 'Array Exercises' do
       expect(reverse([0, 1, 1, 2, 3, 5])).to eq([5, 3, 2, 1, 1, 0])
     end
 
-    xit 'returns an array containing the element when there is only one' do
+    it 'returns an array containing the element when there is only one' do
       expect(reverse(['foo'])).to eq(['foo'])
     end
   end
@@ -132,7 +132,7 @@ RSpec.describe 'Array Exercises' do
       expect(array_length([0, 1, 1, 2, 3, 5])).to eq(6)
     end
 
-    xit 'returns zero when the array is empty' do
+    it 'returns zero when the array is empty' do
       expect(array_length([])).to eq(0)
     end
   end
@@ -143,7 +143,7 @@ RSpec.describe 'Array Exercises' do
       expect(include?([0, 1, 1, 2, 3, 5], 3)).to be true
     end
 
-    xit 'returns false when the array does not contain the specified value' do
+    it 'returns false when the array does not contain the specified value' do
       expect(include?([0, 1, 1, 2, 3, 5], 8)).to be false
     end
   end
@@ -154,7 +154,7 @@ RSpec.describe 'Array Exercises' do
       expect(join([0, 1, 1, 2, 3, 5], ' + ')).to eq('0 + 1 + 1 + 2 + 3 + 5')
     end
 
-    xit 'returns a string joining an array of strings with " "' do
+    it 'returns a string joining an array of strings with " "' do
       expect(join(['foo', 'bar', 'baz'], ' ')).to eq('foo bar baz')
     end
   end

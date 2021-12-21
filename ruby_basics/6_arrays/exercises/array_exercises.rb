@@ -19,7 +19,11 @@ end
 
 def last_three_elements(array)
   # return the last 3 elements of the array
-  array.last(3)
+  if array.length < 3
+    array
+  else
+    array.last(3)
+  end
 end
 
 def add_element(array)
@@ -37,11 +41,15 @@ end
 
 def remove_first_three_elements(array)
   # Step 1: remove the first three elements
+  if array.length < 3
+    array = []
+  else
   new_arr = array.first(3)
   array.each_index do |i|
     if i < 3
       array.shift
     end
+  end
   end
   # Step 2: return the array (because Step 1 returns the values of the elements removed)
   array
