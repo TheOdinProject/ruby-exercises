@@ -32,14 +32,14 @@ These exercises are designed to complement the [Ruby Basic lessons](https://www.
 
 - [ ] Method Exercises
 
-#### 9.Basic Enumerables
+#### 10.Basic Enumerables
 
 - [ ] Basic Enumerable Exercises
 
-#### 10.Predicate Enumerables
+#### 11.Predicate Enumerables
 
 - [ ] Predicate Enumerable Exercises
 
-#### 11.Nested Collections
+#### 12.Nested Collections
 
 - [ ] Nested Collection Exercises
