@@ -107,8 +107,8 @@ RSpec.describe 'Nested Array Exercises' do
     context 'when Ruby is the favorite' do
       let(:array) do
         [
-          { name: 'Ruby', is_my_favorite?: true },
           { name: 'JavaScript', is_my_favorite?: false },
+          { name: 'Ruby', is_my_favorite?: true },
           { name: 'HTML', is_my_favorite?: false }
         ]
       end
