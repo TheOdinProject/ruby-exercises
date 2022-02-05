@@ -48,6 +48,11 @@ RSpec.describe 'Hash Exercises' do
       expect(favorite_number(my_favorites)).to eq({ lucky: 7 })
     end
 
+    xit 'returns nil when a key with nil value is present' do
+      my_favorites = { color: ['orange', 'green'], number: nil }
+      expect(favorite_number(my_favorites)).to eq(nil)
+    end
+
     xit 'returns the default number when the key is not found' do
       my_favorites = { color: ['orange', 'green'], movie: 'Avengers: Endgame' }
       expect(favorite_number(my_favorites)).to eq(42)
