@@ -9,7 +9,7 @@ def favorite_color(favorite_list)
 end
 
 def favorite_number(favorite_list)
-  # return the value of the number key or 42 if the key is not found
+  # use #fetch to return the value of the number key or 42 if the key is not found
 end
 
 def update_favorite_movie(favorite_list, movie)
