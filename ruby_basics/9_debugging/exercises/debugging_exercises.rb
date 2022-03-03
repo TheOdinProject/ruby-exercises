@@ -1,13 +1,13 @@
 # use the stack trace to debug the following method
 def find_smallest_value(nested_array)
-  nested_array.reduce { |smallest_value, current_array|
-    smallest_value = current_array.min if smallest_value > current_array.min 
-  }
+  smallest_value = nil
+  nested_array.each do { |nested_array|
+    if nested_array.min   }
 end
 
 # use the stack trace to debug the following method
 def greatest_value(nested_hash)
-  
+
 end
 
 def array_length(array)
