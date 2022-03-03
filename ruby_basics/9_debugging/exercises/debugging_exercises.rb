@@ -40,3 +40,16 @@ def isogram?(string)
   unique_length = string_array.uniq.length
   original_length == unique_length
 end
+
+# Can you guess what's next?
+# That's right! The final exercise from the lesson, which we'll debug with pry-byebug
+# Try to avoid looking at the problem too much, let's rely on pry to fix it
+# First, include require 'pry-byebug' at the top of this page
+# Next insert plenty of breakpoints, and see if you can tell where things break
+# Once you find the error, fix it and get the test to pass
+
+def yell_greeting(string)
+  name = string
+  name = name.downcase
+  greeting = "WASSAP, #{name}!"
+end
