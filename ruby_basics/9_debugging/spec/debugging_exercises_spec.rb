@@ -4,7 +4,7 @@ require_relative '../exercises/debugging_exercises'
 RSpec.describe 'Debugging Exercises' do
   describe 'decrement_smallest_value' do
 
-    it 'Returns 0 after you use the stack trace to find and fix the error' do
+    xit 'Returns 0 after you use the stack trace to find and fix the error' do
       nested_array = [[3, 4], [1, 2]]
 
       smallest_value_decremented = decrement_smallest_value(nested_array)
@@ -22,6 +22,15 @@ RSpec.describe 'Debugging Exercises' do
       greatest_value_incremented = increment_greatest_value(nested_array)
 
       expect(greatest_value_incremented).to eq(5)
+    end
+  end
+
+  describe 'isogram' do
+
+    # remove the 'x' from the line below to unskip the test
+    xit 'Returns true after you use puts to fix the method, since Odin is an isogram' do
+
+      expect(isogram?("Odin")).to be true
     end
   end
 end

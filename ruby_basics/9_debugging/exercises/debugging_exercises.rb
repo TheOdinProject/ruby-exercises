@@ -31,32 +31,12 @@ def increment_greatest_value(nested_array)
   greatest_value += 1
 end
 
-def array_length(array)
-  # use puts to debug this method, so that it
-  # returns the length of the array
-end
+# This next exercise might look familiar
+# Use p and puts in order to find what's wrong with our method
 
-def include?(array, value)
-  # use puts to debug this method, so that it
-  # returns true if the array includes the value
-end
-
-def join(array, separator)
-  # use puts to debug this method, so that it
-  # returns the result of joining the array with the separator
-end
-
-def favorite_categories(favorite_list)
-  # use pry to debug this method, so that it
-  # returns the keys of favorite_list
-end
-
-def favorite_items(favorite_list)
-  # use pry to debug this method, so that it
-  # returns the values of favorite_list
-end
-
-def favorite_number(favorite_list)
-  # use pry to debug this method, so that it
-  # returns the value of the number key or 42 if the key is not found
+def isogram?(string)
+  original_length = string.length
+  string_array = string.downcase.split
+  unique_length = string_array.uniq.length
+  original_length == unique_length
 end
