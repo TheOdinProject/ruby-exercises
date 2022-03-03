@@ -1,12 +1,23 @@
-# use the stack trace to debug the following method
-def find_smallest_value(nested_array)
-  smallest_value = nil
-  nested_array.each do { |nested_array|
-    if nested_array.min   }
+# First, we're going to practice reading the Stack Trace
+# Don't look at this method prior to running the test
+# Run rspec, let the test fail, and look at the stack trace
+# Try to see if you can work your way from the last line, the bottom of the stack
+# To the top, the first line, where the error occured, and ONLY THEN fix the error
+
+def decrement_smallest_value(nested_array)
+  smallest_value = nested_array.flatten.max
+  nested_array.each do |array|
+    array.each do |current_value|
+      if smallest_value > current_value
+        smallest_value = current_value
+      end
+    end
+  end
+  smallest_value -= 1
 end
 
 # use the stack trace to debug the following method
-def greatest_value(nested_hash)
+def increment_greatest_value(nested_array)
 
 end
 
