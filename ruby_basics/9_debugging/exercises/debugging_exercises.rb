@@ -1,6 +1,7 @@
 # First, we're going to practice reading the Stack Trace
 # Don't look at this method prior to running the test
-# Run rspec, let the test fail, and look at the stack trace
+# Type 'rspec' into the terminal to run Rspec
+# Once this test fails, have a look at the Stack Trace
 # Try to see if you can work your way from the last line, the bottom of the stack
 # To the top, the first line, where the error occured, and ONLY THEN fix the error
 
