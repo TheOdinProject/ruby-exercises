@@ -93,7 +93,7 @@ RSpec.describe 'Method Exercises' do
     end
 
     xit 'outputs the default pet pun' do
-      expect { pet_pun('rabbit') }.to output("I think rabbits have pet-tential!\n").to_stdout
+      expect { pet_pun('rabbits') }.to output("I think rabbits have pet-tential!\n").to_stdout
     end
   end
 
