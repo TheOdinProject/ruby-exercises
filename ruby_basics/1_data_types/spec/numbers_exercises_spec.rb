@@ -5,8 +5,12 @@ RSpec.describe 'Numbers Exercises' do
 
   describe 'addition exercise' do
 
-    it 'adds two numbers' do
+    it 'adds two positive numbers' do
       expect(add(1, 2)).to eq(3)
+    end
+
+    it 'adds two negative numbers' do
+      expect(add(-2, -3)).to eq(-5)
     end
   end
 
@@ -16,9 +20,9 @@ RSpec.describe 'Numbers Exercises' do
       expect(subtract(5, 3)).to eq(2)
     end
   end
-  
+
   describe 'multiplication exercise' do
-    
+
     # remove the 'x' from the line below to unskip the test
     xit 'multiplies two numbers' do
       expect(multiply(5, 5)).to eq(25)
