@@ -24,7 +24,7 @@ To install RSpec, run the following command in your terminal:
 
     gem install rspec
 
-You should see a message saying "5 gems installed" in your terminal. Verify that the installation was successful by simply running the following command:
+You should see a message saying "6 gems installed" in your terminal. Verify that the installation was successful by simply running the following command:
 
     rspec
 
