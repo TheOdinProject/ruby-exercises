@@ -189,5 +189,10 @@ RSpec.describe 'Nested hash exercises' do
       expected_output = "its real name isn't even javascript"
       expect(find_language_facts(hash, :javascript, 1)).to eq(expected_output)
     end
+
+    it 'returns nil for python' do
+      expected_output = nil
+      expect(find_language_facts(hash, :python, 1)).to eq(expected_output)
+    end
   end
 end
