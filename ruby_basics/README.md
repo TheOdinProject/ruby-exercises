@@ -8,7 +8,7 @@ These exercises are designed to complement the [Ruby Basic lessons](https://www.
 3. Open that corresponding exercise file in your text editor, in this case the `exercises/numbers_exercises.rb` file.
 4. Write the code to get the failing test to pass in the exercise file and run the tests again to verify it passes.
 5. Each `exercises` folder has a corresponding `spec` folder with matching test files. For instance, you can find the tests for `exercises/numbers_exercises.rb` in `spec/numbers_exercises_spec.rb`. Find and open the matching spec file.
-6. Unskip the next test by removing the `x` from `xit`.
+6. Unskip the next test by removing the `x` from `it`.
 7. Run your tests again `rspec spec/numbers_exercises_spec.rb` the second test should now be failing.
 8. Repeat the steps from step 2 until no more tests are skipped and all are passing.
 
