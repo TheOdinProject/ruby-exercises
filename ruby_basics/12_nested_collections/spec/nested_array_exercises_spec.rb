@@ -52,7 +52,7 @@ RSpec.describe 'Nested Array Exercises' do
     end
   end
 
-  describe 'delete seat from grid exercise' do
+  describe 'delete seat from row exercise' do
     let(:array) { [[nil, 'Bob', 'Joe'], [nil, nil, 'Bill']] }
 
     xit 'returns the array with the second item in the first row deleted' do
