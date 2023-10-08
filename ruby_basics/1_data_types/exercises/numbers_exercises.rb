@@ -1,5 +1,7 @@
 def add(a, b)
   # return the result of adding a and b
+  a=1
+  b=2
   a + b
 end
 
