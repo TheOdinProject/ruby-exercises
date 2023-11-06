@@ -30,6 +30,10 @@ You should see a message that says something along the lines of "6 gems installe
 
 Which should print a few lines about not finding any examples. This is ok and means it's working!
 
+If your shell reports that it cannot find the rspec binary, it may be necessary to run the following command:
+
+    rbenv rehash
+
 ## Usage
 
 Each directory contains a read me with instructions for the exercises within them.
