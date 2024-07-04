@@ -36,7 +36,10 @@ capitalize("capitalize")
 
 def uppercase(string)
   # uppercase all letters in the string
+  string = 'uppercase'
+  puts string.upcase
 end
+uppercase("uppercase")
 
 def downcase(string)
   # downcase all letters in the string
