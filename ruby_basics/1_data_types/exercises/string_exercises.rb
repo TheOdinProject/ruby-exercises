@@ -6,6 +6,8 @@ def concatenate_example(string)
   puts word
   word = classic.concat(" " + str)
   puts word
+  word = "Classic" << " " << "string"
+  puts word
 end
 concatenate_example("string")
 
