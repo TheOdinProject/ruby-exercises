@@ -1,14 +1,13 @@
 def concatenate_example(string)
   # use concatenation to format the result to be "Classic <string>"
-  my_name = "Sammy the Shark"
-my_age = "none of your business"
-
-# assign concatenated string to variable
-output = "My name is " + my_name + " and my age is " + my_age + "."
-  puts "Classic" + "Ruby"
-  puts output
+   classic = "Classic"
+   str = "string" 
+    word = classic + " " + str
+  puts word
+  word = classic.concat(" " + str)
+  puts word
 end
-# concatenate_example(string)
+concatenate_example("string")
 
 def concatenate(string)
   # use concatenation to format the result to be "Hello <string>!"
