@@ -50,16 +50,31 @@ downcase("DOWNCASE")
 
 def empty_string(string)
   # return true if the string is empty
+  string = ''
+  puts string.empty?
 end
+empty_string("")
 
 def string_length(string)
   # return the length of the string
+  string = 'string'
+  puts string.length
 end
+string_length("string")
 
 def reverse(string)
   # return the same string, with all of its characters reversed
+  string = 'strings'
+  puts string.reverse
 end
+reverse(" I have a string  !")
 
 def space_remover(string)
   # remove all the spaces in the string using gsub
+  str = 'I have a string'
+  str1 = 'Have Samuel Kababreebe'
+  puts str1.gsub(" ", "")
+  # puts str.gsub(/\s+/, "")
+  puts str.gsub(" ", "")
 end
+space_remover('string')
