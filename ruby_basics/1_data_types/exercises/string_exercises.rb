@@ -43,7 +43,10 @@ uppercase("uppercase")
 
 def downcase(string)
   # downcase all letters in the string
+  string = 'DOWNCASE'
+  puts string.downcase
 end
+downcase("DOWNCASE")
 
 def empty_string(string)
   # return true if the string is empty
