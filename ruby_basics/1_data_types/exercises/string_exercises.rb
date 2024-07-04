@@ -22,7 +22,10 @@ concatenate("string")
 
 def substrings(word)
   # return the first 4 letters from the word using substrings
+  word = "substring"
+  puts word[0, 4]
 end
+substrings("substring")
 
 def capitalize(word)
   # capitalize the first letter of the word
