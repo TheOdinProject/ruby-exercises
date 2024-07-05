@@ -1,19 +1,16 @@
 def nil_array(number)
   # return an array containing `nil` the given number of times
-  arr = []
-  number.times do
-    arr << nil
-  end
-  puts arr
+  Array.new(number)
 end
-nil_array(1)
 
 def first_element(array)
   # return the first element of the array
+  array.first
 end
 
 def third_element(array)
   # return the third element of the array
+  array[2]
 end
 
 def last_three_elements(array)
@@ -65,3 +62,10 @@ end
 def join(array, separator)
   # return the result of joining the array with the separator
 end
+
+# ITERATING OVER ARRAYS
+# Each 
+# arr = [1, 2, 3, 4, 5]
+# arr.each {|a| print a -= 10, " "}
+# prints: -9 -8 -7 -6 -5
+#=> [1, 2, 3, 4, 5]
