@@ -6,6 +6,12 @@ person.each do |key, value|
   puts "Bob's #{key} is #{value}"
 end
 
+school = {Class: 'p1', color: 'Navy Blue', Hair: 'Black', Height: '5.11 ft', shoe_type: 'Sued'}
+
+school.each do |key, value|
+  puts "Have's #{key} is #{value}."
+end
+
 # Using Optional Parameters
 # Optional parameters are parameters that have a default value if no argument is passed. Here's an example:
 def greeting(name, options = {})
@@ -18,6 +24,8 @@ end
 end
 greeting("Bob")
 greeting("Bob", {age: 62, city: "New York City"})
+
+name_and_age = { "Bob" => 42, "Steve" => 31, "Joe" => 19}
 
 def create_favorite_hash(color, number)
   # return a hash with the following key/value pairs:
