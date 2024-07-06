@@ -9,7 +9,9 @@ end
 school = {Class: 'p1', color: 'Navy Blue', Hair: 'Black', Height: '5.11 ft', shoe_type: 'Sued'}
 
 school.each do |key, value|
+  # school.each { |values| puts values}
   puts "Have's #{key} is #{value}."
+  
 end
 
 # Using Optional Parameters
@@ -18,7 +20,7 @@ def greeting(name, options = {})
 if options.empty?
   puts "Hi, my name is #{name}"
 else
-  puts "Hi, my name is #{name} and I'm #{options[:age]}" +
+  puts "Hi, my name is #{name}, I'm #{options[:age]}" +
        " years old and I live in #{options[:city]}."
 end
 end
@@ -26,6 +28,18 @@ greeting("Bob")
 greeting("Bob", {age: 62, city: "New York City"})
 
 name_and_age = { "Bob" => 42, "Steve" => 31, "Joe" => 19}
+
+family = {  uncles: ["bob", "joe", "steve"],
+            sisters: ["jane", "jill", "beth"],
+            brothers: ["frank","rob","david"],
+            aunts: ["mary","sally","susan"]
+          }
+
+  new_family = family .select { |k,v| k == :sisters || k == :brothers}
+  puts new_family
+
+  # new_family = family .select { |k,v| k == :sisters || k == :brothers}.values.flatten
+  # puts new_family
 
 def create_favorite_hash(color, number)
   # return a hash with the following key/value pairs:
