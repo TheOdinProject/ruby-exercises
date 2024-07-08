@@ -9,32 +9,54 @@
 def ascii_translator(number)
     # return the number's ASCII character
     number.chr
-    # puts "ASCII: #{number}"
+    puts "ASCII: #{number}"
 end
 
 # method name: #common_sports
 # parameters: current_sports and favorite_sports (both arrays)
 # return value: an array containing items in both arrays
 # hint: use Array#intersection
-
+def common_sports(current_sports, favorite_sports)
+    # return an array containing items in both arrays
+    current_sports = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    favorite_sports = [2, 4, 6, 8, 10]
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] & [2, 4, 6, 8, 10].intersection(current_sports, favorite_sports)
+    puts "Common Sports: #{current_sports & favorite_sports}"
+end
 
 # method name: #alphabetical_list
 # parameter: games (an array)
 # return value: games, alphabetically sorted and duplicates removed
 # hint: chain Array#sort and Array#uniq together
-
+def alphabetical_list(games)
+    # return games, alphabetically sorted and duplicates removed
+    games = ["Halo", "Mario", "Zelda", "Halo", "Mario", "Zelda", "Juma", "Tom", "Jerry", "Juma", "Tom", "Jerry"]
+    games.sort.uniq
+    puts "Alphabetical List: #{games.sort.uniq}"
+    alphabetical_list = ["Halo", "Mario", "Zelda", "Juma", "Tom", "Jerry"]
+end
 
 # method name: #lucky_number
 # parameter: number (an integer) with default value of 7
 # return value: a string "Today's lucky number is <number>"
-
+def lucky_number(number = 7)
+    # return a string "Today's lucky number is <number>"
+    puts "Today's lucky number is #{number}"
+end
 
 # method name: #ascii_code
 # parameter: character (a string)
 # return value: the character's ordinal number
 # explicit return value: 'Input Error' if character's length does not equal 1
 # hint: use String#ord
-
+def ascii_code(character)
+    # return the character's ordinal number
+    if character.length != 1
+        puts "Input Error"
+    else
+        puts "ASCII Code: #{character.ord}"
+    end
+end
 
 # method name: #pet_pun
 # parameter: animal (a string)
@@ -43,10 +65,27 @@ end
 # console output: if animal is 'dog', 'Dogs are paw-some!' (awesome)
 # console output: otherwise, "I think <animal>s have pet-tential!" (potential)
 # hint: use puts
-
+def pet_pun(animal)
+    # output a pun based on the animal
+    if animal == "cat"
+        puts "Cats are purr-fect!"
+    elsif animal == "dog"
+        puts "Dogs are paw-some!"
+    else
+        puts "I think #{animal}s have pet-tential!"
+    end
+end
 
 # method name: #twenty_first_century?
 # parameter: year (an integer)
 # return value: true if the year is between 2001 - 2100, otherwise return false
 # hint: use Comparable#between?
+def twenty_first_century(year)
+    # return true if the year is between 2001 - 2100
+    year = 2020
+    puts year.between?(2001, 2100)
+
+    year = 1999
+    puts year.between?(2001, 2100)
+end
 
