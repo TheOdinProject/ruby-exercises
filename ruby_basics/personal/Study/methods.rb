@@ -123,13 +123,76 @@ Math.cos(0) # => 1.0
 Math.hypot(3, 4) # => 5.0
 Math.log(2, 10) # => 0.3010299956639812
 Time.new(2008, 7, 4) # => 2008-07-04 00:00:00 -0400 
-t.monday? # => false
-t.friday? # => true
-t.saturday? # => false
-t.wednesday? # => false
-t.thursday? # => false
-t.sunday? # => false
-t.tuesday? # => false
+
+# VARIABLES AS POINTERS
+# Ruby variables are references to objects. When you assign a variable to an object, you are actually assigning a reference to that object.
+# When you assign a variable to another variable, you are copying the reference, not the object itself.
+# We'll take a deeper look at variables in this section, and specifically how they act as pointers to an address space in memory. That is, the variable doesn't actually contain the value. Instead, it contains a pointer to a specific area in memory that contains the value. This is a concept that confuses a lot of new programmers, and it's also one of the most important concepts to understand. 
+a = "hi there"
+b = a
+a = "not here" 
+puts a # => "not here"
+puts b # => "hi there"
+
+a = "hi there"
+b = a
+a << ", Bob"
+#Question 1: What is the value of a and b?
+x = 'a'
+y = x
+y = 'b'
+# puts x = 'a'
+# puts y = 'b'
+puts "x = #{x}, y = #{y}" 
+
+#Question 2:
+x = 'a'
+y = x
+x = y.capitalize
+# puts x = 'A'
+# puts y = 'a'
+puts "x = #{x}, y = #{y}"
+
+# Question 3:
+x = 'a'
+y = x
+x = y.replace('b')
+# x => 'b'
+# y => 'b'
+puts "x = #{x}, y = #{y}"
+
+# Question 4:
+x = 'a'
+y = x
+z = y
+y = 2
+# x => 'a'
+# y => 2
+# z => 'a'
+puts "x = #{x}, y = #{y}, z = #{z}"
+
+# Question 5:
+x = 'a'
+y = 'b'
+z = [x, y]
+y = 2
+# x => 'a'
+# y => 2
+# z => ['a', 'b']
+puts "x = #{x}, y = #{y}, z = #{z}"
+
+# Question 6:
+x = y
+y = 'a'
+z = 'b'
+y = z
+# x => 'a'
+# y => 'b'
+# z => 'b'
+puts "x = #{x}, y = #{y}, z = #{z}"
+
+
+
 
 
 
