@@ -54,3 +54,41 @@ my_hash1 = {x => "some thing"}
 # The first hash that was created used a symbol x as the key. The second hash used the string value of the x variable as the key.
 p my_hash
 p my_hash1
+
+# 
+
+'kabareebe' =~ /r/ # => 5
+'kabareebe' =~ /z/ # => nil
+
+# boolean_regex.rb 
+# Write a method that takes a string as an argument and returns true if the string contains the letter "a" and false otherwise. 
+# The method should be case insensitive and should ignore all non-alphabetic characters.
+# i = case insensitive
+def has_a?(string)
+    if string =~ /o/i
+      puts "We have a match!"
+    else
+      puts "No match here."
+    end
+  end
+  
+  has_a?("basketball")
+  has_a?("football")
+  has_a?("hockey")
+  has_a?("golf")
+
+# boolean_regex.rb 
+# Write a method that takes a string as an argument and returns true if the string contains the letter "b" and false otherwise. 
+# The method should be case insensitive and should ignore all non-alphabetic characters.
+
+def has_a_b?(string)
+    if string =~ /b/i
+      puts "We have a match!"
+    else
+      puts "No match here."
+    end
+  end
+  has_a_b?("hockey")
+  has_a_b?("footBall")
+  has_a_b?("golf")
+  has_a_b?("BasketBall")
