@@ -115,3 +115,29 @@ def has_a_b?(string)
   has_a_b?("basketball")
   has_a_b?("football")
  
+# Ruby Standard Classes
+# The Ruby Standard Library includes a collection of classes that provide useful functionality for your programs.
+Math.sqrt(121) # => 11.0
+Math::PI # => 3.141592653589793
+Math.cos(0) # => 1.0
+Math.hypot(3, 4) # => 5.0
+Math.log(2, 10) # => 0.3010299956639812
+Time.new(2008, 7, 4) # => 2008-07-04 00:00:00 -0400 
+t.monday? # => false
+t.friday? # => true
+t.saturday? # => false
+t.wednesday? # => false
+t.thursday? # => false
+t.sunday? # => false
+t.tuesday? # => false
+
+
+
+
+
+
+
+
+
+
+
