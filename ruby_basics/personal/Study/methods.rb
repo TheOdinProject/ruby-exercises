@@ -92,3 +92,26 @@ def has_a_b?(string)
   has_a_b?("footBall")
   has_a_b?("golf")
   has_a_b?("BasketBall")
+
+# Using MatchData to extract data
+# Write a method that takes a string as an argument and returns the first word in the string that matches a pattern.
+/e/.match("The quick brown fox jumps over the lazy dog.")
+# => #<MatchData "e">
+# The match method returns a MatchData object that contains information about the match.
+# The MatchData object can be used to extract the matched substring.
+
+# boolean_matchdata.rb
+# You can use a MatchData object to act as a boolean value in your program by checking if the object is nil.
+
+def has_a_b?(string)
+    if /b/.match(string)
+      puts "We have a match!"
+    else
+      puts "No match here."
+    end
+  end
+   has_a_b?("hockey")
+  has_a_b?("golf")
+  has_a_b?("basketball")
+  has_a_b?("football")
+ 
