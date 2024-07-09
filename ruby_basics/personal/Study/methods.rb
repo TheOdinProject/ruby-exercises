@@ -191,6 +191,137 @@ y = z
 # z => 'b'
 puts "x = #{x}, y = #{y}, z = #{z}"
 
+# BLOCKS AND PROCS
+# Blocks are a way to group code together. They are similar to methods, but they don't have a name. You can think of them as anonymous methods.
+
+# passing_block.rb
+
+def take_block(&block)
+    block.call
+  end
+  
+  take_block do
+    puts "Block being called in the method!"
+  end
+
+# Making it more complex by passing a block to a method
+def take_block(number, &block)
+    block.call(number)
+  end
+
+    number = 42
+    take_block(number) do |num|
+        puts "Block being called in the method! #{num}"
+end
+
+# PROCS
+# Procs are blocks that are wrapped in a proc object. You can think of a proc as a saved block. Procs can be used in methods just like blocks. The big difference between procs and blocks is that procs can be called over and over without rewriting them.
+
+# proc_example.rb
+
+talk = Proc.new do
+    puts "I am talking."
+  end
+  
+  talk.call
+
+# Procs can also take arguments.
+talk = Proc.new do |name|
+    puts "I am talking to #{name}"
+  end
+
+    talk.call "Bob"
+
+# Procs can be passed into methods. Let's take our previous passing_block.rb code and modify the method to take a proc instead. We'll add some more functionality too.
+def take_proc(proc)
+    [1, 2, 3, 4, 5].each do |number|
+      proc.call number
+    end
+  end
+  # We'll create a proc that takes a |number| parameter and prints out the number.
+  
+    proc = Proc.new do |number|
+        puts "#{number}. Proc being called in the method!"
+    end
+
+take_proc(proc)
+
+# Using procs gives us the added flexibility to be able to reuse blocks in more than one place without having to type them out every time.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
