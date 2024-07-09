@@ -384,8 +384,20 @@ arr.each do |number|
     puts number if number > 5
 end
 
+arr.each do |number|
+    if number > 5
+        puts number
+    end
+end
 
+# Question 7: Use the select method to extract all odd numbers into a new array.
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+new_arr = arr.select do |number|
+    # number % 2 != 0
+    number.odd?
+end
 
+puts new_arr
 
 
 
