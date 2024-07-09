@@ -331,10 +331,12 @@ end
 top
 
 # EXERCISE
+# Question 1
 # Write a program that checks if the sequence of characters "lab" exists in the following strings. If it does exist, print out the word.
 def has_lab?(string)
+    # if /lab/ =~ string
     if string =~ /lab/i
-        puts "We got a Match!"
+        puts string
     else 
         puts "No Match found!"
     end
@@ -346,18 +348,41 @@ has_lab?("Pans Labyrinth")
 has_lab?("elaborate")
 has_lab?("polar bear")
 
+# Question 2: What will the following program print to the screen? What will it return?
+def execute(&block)
+    block
+end
+execute {puts "Hello from inside the execute method!"}
+# The program will print nothing to the screen because the block is never activated with the .call method. The method returns a Proc object.
 
+# Question 3: What is exception handling and what problem does it solve?
+# Exception handling is a specific process that deals with errors in a manageable and predictable way. It solves the problem of unpredictability in programs that interact with the real world. If a user enters bad information or a file-manipulating process gets corrupted, your program needs to know what to do when it runs into these exceptional conditions.
 
+# Question 4: Modify the code in exercise 2 to make the block execute properly.
 
+def execute(&block)
+    block.call
+end
+block = execute() {puts "Hello from inside the execute method!"}
 
+# Question 5: Use the each method of Array to iterate over [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], and print out each value.
 
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
+# Single line version
+arr.each {|number| puts number}
+# Multiple-line version
+arr.each do |number|
+    puts number
+end
 
+# Question 6: Same as above, but only print out values greater than 5.
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+arr.each {|number| puts number if number > 5}
 
-
-
-
-
+arr.each do |number|
+    puts number if number > 5
+end
 
 
 
