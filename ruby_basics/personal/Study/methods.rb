@@ -470,17 +470,22 @@ puts contacts
 # Question 15: Use Ruby's Array method delete_if and String method start_with? to delete all of the words that begin with an "s" in the following array.
 arr = ['snow', 'winter', 'ice', 'slippery', 'salted roads', 'white trees']
 arr.delete_if do |word| 
-    word.start_with?("s" || "w")
+    word.start_with?("w")
 end
-
 puts arr
 
+arr.delete_if { |str| str.start_with?("w", "s") }
+puts arr
 
-
-
-
-
-
+# Question 16: Take the following array and turn it into a new array that consists of strings containing one word. (ex. ["white snow", etc...] → ["white", "snow", etc...]. Look into using Array's map and flatten methods, as well as String's split method.
+array = ['white snow', 'winter wonderland', 'melting ice',
+     'slippery sidewalk', 'salted roads', 'white trees']
+# When you use the map method on an array, it returns a new array based on the block's return value. In this case, we are splitting each string into an array of words.
+# The flatten method then takes this array of arrays and turns it into a one-dimensional array.
+# The split method is used to split a string into an array of substrings based on a delimiter. In this case, the delimiter is a space.
+array = array.map { |pairs| pairs.split }
+array = array.flatten
+puts array
 
 
 
