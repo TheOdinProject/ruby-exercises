@@ -248,25 +248,76 @@ take_proc(proc)
 
 # Using procs gives us the added flexibility to be able to reuse blocks in more than one place without having to type them out every time.
 
+# EXCEPTIONAL HANDLING
+# Exception handling is a specific process that deals with errors in a manageable and predictable way. The main thing we want to make you aware of at this point, is how exception handling works and what it looks like. The reserved word rescue will show up a lot in your Ruby career so it's better to know what it is sooner than later.
 
+# When your programs are interacting with the real world, there is a large amount of unpredictability. If a user enters bad information or a file-manipulating process gets corrupted, your program needs to know what to do when it runs into these exceptional conditions.
 
+names = ['Treasure', 'Samuel', nil, 'Ramathan', 'Don', 'Kikazi']
 
+names.each do |name|
+    begin
+        puts "#{name}'s name has this #{name.length} letters in it. "
+    rescue
+        puts "Something went wrong!"
+    end
+end
 
+# Using RESCUE to reserve word-in-line
+zero = 0
+puts "Before each call"
+zero.each {|element| puts element} rescue puts"Can't do that!"
+    puts "After the call"
+# If we give this same code the proper variable, our rescue block never gets executed.
+zero = [1,2,3,4,5,6]
+puts "Before each call"
+zero.each {|element| puts element} rescue puts"Can't do that!"
+    puts "After the call"
 
+# We can also rescue pre-existing errors when we are writing our code.
+# Using RESCUE PRE-EXISTING ERRORS with a divide method
+def divide(number, divisor)
+    begin
+        answer = number / divisor
+    rescue ZeroDivisionError => e
+        e.message
+    end
+end
+puts divide(16, 4)
+puts divide(4, 0)
+puts divide(14, 7)
 
+# EXCEPTION & STACK TRACES
+# Example 
+# '1' + 1
+# TypeError:
+# no implicit conversion of Integer into String
 
+def greet(person)
+    puts "Hello, " + person
+end
+greet("John")
+# greet(1) # => TypeError: no implicit conversion of Integer into String
 
+# Another example
+def space_out_letters(person)
+    return person.split("").join(" ")
+end
+# puts space_out_letters("John") # => "J o h n"
+# puts space_out_letters("1") # => "1"
 
+def greet(person)
+    return "H e l l o, " + space_out_letters(person)
+end
+# puts greet("John") # => "H e l l o, J o h n"
+# puts greet("1") # => "H e l l o, 1"
 
+def decorate_greeting(person)
+    puts "" + greet(person) + ""
+end
 
-
-
-
-
-
-
-
-
+decorate_greeting("John")
+decorate_greeting(1)
 
 
 
