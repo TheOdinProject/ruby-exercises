@@ -487,15 +487,23 @@ array = array.map { |pairs| pairs.split }
 array = array.flatten
 puts array
 
+# Question 17: What will the following program output?
+hash1 = {shoes: "nike", "hat" => "adidas", :hoodie => true}
+hash2 = {"hat" => "adidas", :shoes => "nike", hoodie: true}
 
+if hash1 == hash2
+  puts "These hashes are the same!"
+else
+  puts "These hashes are not the same!"
+end
+# For these Hashes, they will be the same, which is a different case with the Arrays that operate on the index based condition
 
+# Questiion 18: Challenge: In exercise 14, we manually set the contacts hash values one by one. Now, programmatically loop or iterate over the contacts hash from exercise 14, and populate the associated data from the contact_data array. Hint: you will probably need to iterate over ([:email, :address, :phone]), and some helpful methods might be the Array shift and first methods.
 
+# Note that this exercise is only concerned with dealing with 1 entry in the contacts hash, like this:
 
-
-
-
-
-
+contact_data = ["joe@email.com", "123 Main st.", "555-123-4567"]
+contacts = {"Joe Smith" => {}}
 
 
 
