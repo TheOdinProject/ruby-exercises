@@ -42,6 +42,8 @@ def isogram?(string)
   original_length == unique_length
 end
 
+# puts isogram?("hello")
+
 # Can you guess what's next?
 # That's right! The final exercise from the lesson, which we'll debug with pry-byebug
 # Try to avoid looking at the problem too much, let's rely on pry to fix it
