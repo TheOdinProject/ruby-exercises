@@ -87,5 +87,3 @@ arr.each {|a| print a -= 10, " "}
 puts arr
 # prints: -9 -8 -7 -6 -5
 # returns: [1, 2, 3, 4, 5]
-
-# 
