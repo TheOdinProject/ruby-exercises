@@ -1,6 +1,9 @@
 # Ruby Basics Exercises
 These exercises are designed to complement the [Ruby Basic lessons](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby#basic-ruby) on [The Odin Project](https://www.theodinproject.com/). Each folder contains exercises and specs (tests) for the lessons in the Ruby Basics section.
 
+### Set up local environment (optional)
+1. Please, before keep going, check out this README.md to follow up the setup ruby instructions [General README](https://github.com/TheOdinProject/ruby-exercises/blob/main/README.md) for running it locally.
+
 ### Usage
 
 1. First change directory into the lesson directory, for example `cd 1_data_types`.
