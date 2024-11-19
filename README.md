@@ -40,3 +40,32 @@ If your shell reports that it cannot find the rspec binary, it may be necessary 
 ## Usage
 
 Each directory contains a read me with instructions for the exercises within them.
+
+## Contributing
+
+Make sure that when changing an exercise or its tests that you also make the required changes to that exercise's solution under the `solutions/` directory.
+
+If you're writing an entirely new exercise, there's a script provided to help generate the correct directory structure and boilerplate. An example use for if you wanted to create a new exercise in `ruby_basics` for working with Ruby blocks:
+
+```bash
+bin/generate_exercise ruby_basics 13_blocks block_exercises
+```
+
+This will setup the following structure automatically:
+
+```bash
+.
+├── ruby_basics
+│   └── 13_blocks
+│       ├── exercises
+│       │   └── block_exercises.rb
+│       └── spec
+│           ├── block_exercises_spec.rb
+│           └── spec_helper.rb
+└── solutions
+    └── ruby_basics
+        └── 13_blocks
+            ├── exercises
+            └── spec
+                └── spec_helper.rb
+```
