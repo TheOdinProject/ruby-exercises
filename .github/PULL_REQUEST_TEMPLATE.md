@@ -29,3 +29,4 @@ Closes #XXXXX
 -   [ ] The `Because` section summarizes the reason for this PR
 -   [ ] The `This PR` section has a bullet point list describing the changes in this PR
 -   [ ] If this PR addresses an open issue, it is linked in the `Issue` section
+-   [ ] If this PR includes changes to exercises, they are also changed in the `solutions` folder.
