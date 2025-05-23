@@ -5,7 +5,7 @@ require 'pry-byebug'
 # Type 'rspec' into the terminal to run Rspec
 # Once this test fails, have a look at the Stack Trace
 # Try to see if you can work your way from the last line, the bottom of the stack
-# To the top, the first line, where the error occured, and ONLY THEN fix the error
+# To the top, the first line, where the error occurred, and ONLY THEN fix the error
 
 def decrement_smallest_value(nested_array)
   smallest_value = nested_array.flatten.max
