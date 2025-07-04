@@ -10,7 +10,7 @@ class ExerciseGenerator
   TEMPLATE_DIR_PATH = "generators/exercise_template".freeze
 
   def generate
-    unless Dir.exist?(exercise_directory_path)
+    unless Dir.exist?(exercise_group_path)
       make_exercise_directory
       make_solutions_directory
     end
@@ -23,16 +23,20 @@ class ExerciseGenerator
 
   attr_reader :namespace, :exercise_group_name, :exercise_name
 
-  def exercise_directory_path
+  def exercise_group_path
     File.join(namespace, exercise_group_name)
   end
 
+  def exercise_directory_path
+    File.join(exercise_group_path, "exercises")
+  end
+
   def exercise_file_path
-    File.join(exercise_directory_path, "exercises", "#{exercise_name}.rb")
+    File.join(exercise_directory_path, "#{exercise_name}.rb")
   end
 
   def spec_file_path
-    File.join(exercise_directory_path, "spec", "#{exercise_name}_spec.rb")
+    File.join(exercise_group_path, "spec", "#{exercise_name}_spec.rb")
   end
 
   def spec_template
@@ -47,13 +51,14 @@ class ExerciseGenerator
 
   def make_exercise_directory
     FileUtils::mkdir_p(exercise_directory_path)
-    FileUtils::copy_entry(TEMPLATE_DIR_PATH, exercise_directory_path)
+    FileUtils::copy_entry(TEMPLATE_DIR_PATH, exercise_group_path)
   end
 
   def make_solutions_directory
-    solutions_directory_path = File.join("solutions", exercise_directory_path)
+    solutions_group_path = File.join("solutions", exercise_group_path)
+    solutions_exercise_path = File.join("solutions", exercise_directory_path)
 
-    FileUtils::mkdir_p(solutions_directory_path)
-    FileUtils::copy_entry(TEMPLATE_DIR_PATH, solutions_directory_path)
+    FileUtils::mkdir_p(solutions_exercise_path)
+    FileUtils::copy_entry(TEMPLATE_DIR_PATH, solutions_group_path)
   end
 end

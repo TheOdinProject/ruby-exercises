@@ -41,7 +41,7 @@ describe ExerciseGenerator do
       it "sends a `::mkdir_p` message to `FileUtils` to create exercise path" do
         generator.generate
 
-        expected_path = "test_namespace/1_test_group"
+        expected_path = "test_namespace/1_test_group/exercises"
         expect(FileUtils).to have_received(:mkdir_p).with(expected_path)
       end
 
@@ -56,7 +56,7 @@ describe ExerciseGenerator do
       it "sends a `::mkdir_p` message to `FileUtils` to create solutions path" do
         generator.generate
 
-        expected_path = "solutions/test_namespace/1_test_group"
+        expected_path = "solutions/test_namespace/1_test_group/exercises"
         expect(FileUtils).to have_received(:mkdir_p).with(expected_path)
       end
 
