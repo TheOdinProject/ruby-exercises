@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require_relative "../generators/exercise_generator"
+
+ExerciseGenerator.new(*ARGV).generate
