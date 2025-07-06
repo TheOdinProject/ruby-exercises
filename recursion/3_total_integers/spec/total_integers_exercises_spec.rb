@@ -31,4 +31,12 @@ RSpec.describe '#total_integers' do
     complex_array = [{}, [555], '444', [nil, 74.0, [4]], [[6]]]
     expect(total_integers(complex_array)).to eq 3
   end
+
+  xit "does not call `Array#flatten`" do
+    three_int_array = [1, [2, 3]]
+    allow(three_int_array).to receive(:flatten).and_return [1, 2, 3]
+
+    total_integers(three_int_array)
+    expect(three_int_array).not_to have_received(:flatten)
+  end
 end
