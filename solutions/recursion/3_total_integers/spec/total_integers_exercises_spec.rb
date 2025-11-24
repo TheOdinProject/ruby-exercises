@@ -2,41 +2,69 @@ require 'spec_helper'
 require_relative '../exercises/total_integers_exercises'
 
 RSpec.describe '#total_integers' do
-  it 'returns 3 with a 3 integer array' do
-    three_int_array = [1, 2, 3]
-    expect(total_integers(three_int_array)).to eq 3
+  # This shared context ensures that the solution uses recursion
+  # and doesn't take a shortcut by using Array#flatten
+  shared_context 'array that should not use flatten' do
+    before do
+      allow(test_array).to receive(:flatten).and_call_original
+    end
+
+    after do
+      expect(test_array).not_to have_received(:flatten)
+    end
   end
 
-  it 'ignores non integer values' do
-    array_with_string = [1, 2, '3']
-    expect(total_integers(array_with_string)).to eq 2
+  context 'with a 3 integer array' do
+    include_context 'array that should not use flatten'
+    let(:test_array) { [1, 2, 3] }
+
+    it 'returns 3' do
+      expect(total_integers(test_array)).to eq 3
+    end
   end
 
-  it 'ignores floating point numbers' do
-    float_array = [1.0, 2.5, 0.7]
-    expect(total_integers(float_array)).to eq 0
+  context 'with non integer values' do
+    include_context 'array that should not use flatten'
+    let(:test_array) { [1, 2, '3'] }
+
+    it 'ignores non integer values' do
+      expect(total_integers(test_array)).to eq 2
+    end
   end
 
-  it 'returns 0 with an empty nested array' do
-    empty_nested_array = [[], [], []]
-    expect(total_integers(empty_nested_array)).to eq 0
+  context 'with floating point numbers' do
+    include_context 'array that should not use flatten'
+    let(:test_array) { [1.0, 2.5, 0.7] }
+
+    it 'ignores floating point numbers' do
+      expect(total_integers(test_array)).to eq 0
+    end
   end
 
-  it 'returns 2 with a deeply nested two integer array' do
-    deeply_nested_array = [[[[[[[[[[[[[[4]]]]]], 246]]]]]]]]
-    expect(total_integers(deeply_nested_array)).to eq 2
+  context 'with an empty nested array' do
+    include_context 'array that should not use flatten'
+    let(:test_array) { [[], [], []] }
+
+    it 'returns 0' do
+      expect(total_integers(test_array)).to eq 0
+    end
   end
 
-  it 'returns 3 with a complex, deeply nested three integer array' do
-    complex_array = [{}, [555], '444', [nil, 74.0, [4]], [[6]]]
-    expect(total_integers(complex_array)).to eq 3
+  context 'with a deeply nested two integer array' do
+    include_context 'array that should not use flatten'
+    let(:test_array) { [[[[[[[[[[[[[[4]]]]]], 246]]]]]]]] }
+
+    it 'returns 2' do
+      expect(total_integers(test_array)).to eq 2
+    end
   end
 
-  it "does not call `Array#flatten`" do
-    three_int_array = [1, [2, 3]]
-    allow(three_int_array).to receive(:flatten).and_return [1, 2, 3]
+  context 'with a complex, deeply nested three integer array' do
+    include_context 'array that should not use flatten'
+    let(:test_array) { [{}, [555], '444', [nil, 74.0, [4]], [[6]]] }
 
-    total_integers(three_int_array)
-    expect(three_int_array).not_to have_received(:flatten)
+    it 'returns 3' do
+      expect(total_integers(test_array)).to eq 3
+    end
   end
 end
